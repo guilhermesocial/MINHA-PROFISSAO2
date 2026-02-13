@@ -1,11 +1,216 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TechResolve | Técnico de TI</title>
+    <style>
+        /* Variáveis de Cores */
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #2c3e50;
+            --bg-light: #f4f7f6;
+            --text-dark: #333;
+            --white: #ffffff;
+        }
+
+        /* Reset Básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Seção Hero */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: var(--white);
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h2 { font-size: 3rem; margin-bottom: 10px; }
+        .hero p { font-size: 1.2rem; margin-bottom: 20px; }
+
+        /* Seções Gerais */
+        section { padding: 60px 10%; }
+        h2.section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        h2.section-title::after {
+            content: '';
+            width: 50px;
+            height: 3px;
+            background: var(--primary-color);
+            display: block;
+            margin: 10px auto;
+        }
+
+        /* Grid de Serviços */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            text-align: center;
+        }
+
+        .service-card:hover { transform: translateY(-10px); }
+        .service-card i { font-size: 2rem; color: var(--primary-color); }
+        .service-card h3 { margin: 15px 0; }
+
+        /* Habilidades */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background: var(--secondary-color);
+            color: var(--white);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Rodapé */
+        footer {
+            background: var(--secondary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            header { flex-direction: column; }
+            nav { margin-top: 15px; }
+            .hero h2 { font-size: 2rem; }
+        }
+    </style>
 </head>
 <body>
-    
+
+    <header>
+        <h1>TECH<span>SUPORTE</span></h1>
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#habilidades">Habilidades</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <h2>Soluções em TI de A a Z</h2>
+        <p>Suporte técnico especializado para empresas e usuários domésticos.</p>
+        <a href="https://wa.me/seunumeroaqui" style="background: var(--primary-color); color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold;">Solicitar Orçamento</a>
+    </section>
+
+    <section id="servicos">
+        <h2 class="section-title">Meus Serviços</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Manutenção</h3>
+                <p>Reparo de hardware, limpeza preventiva e upgrade de componentes (SSD, Memória).</p>
+            </div>
+            <div class="service-card">
+                <h3>Redes</h3>
+                <p>Configuração de roteadores, repetidores Wi-Fi e estruturação de redes locais.</p>
+            </div>
+            <div class="service-card">
+                <h3>Software</h3>
+                <p>Formatação, instalação de Windows/Linux e remoção de vírus e malwares.</p>
+            </div>
+            <div class="service-card">
+                <h3>Backup</h3>
+                <p>Recuperação de dados e configuração de backup em nuvem automático.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="habilidades" style="background-color: #e9ecef;">
+        <h2 class="section-title">Especialidades</h2>
+        <div class="skills-container">
+            <span class="skill-tag">Windows Server</span>
+            <span class="skill-tag">Hardware Profissional</span>
+            <span class="skill-tag">Segurança Cibernética</span>
+            <span class="skill-tag">Cloud Computing</span>
+            <span class="skill-tag">Linux</span>
+            <span class="skill-tag">CCTV / Câmeras</span>
+            <span class="skill-tag">Suporte Remoto</span>
+        </div>
+    </section>
+
+    <section id="contato" style="text-align: center;">
+        <h2 class="section-title">Precisa de ajuda agora?</h2>
+        <p>Atendimento rápido e eficiente no local ou via suporte remoto.</p>
+        <p style="margin-top: 20px; font-size: 1.2rem;">
+            <strong>Email:</strong> contato@seusite.com.br<br>
+            <strong>WhatsApp:</strong> (11) 99999-9999
+        </p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Seu Nome - Técnico de TI. Todos os direitos reservados.</p>
+    </footer>
+
 </body>
 </html>
