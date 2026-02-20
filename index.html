@@ -1,157 +1,82 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Meu Site Incrível</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="overlay">
+      <nav class="navbar">
+        <a href="#" class="logo">Meu Site</a>
+        <ul class="nav-links">
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+      <div class="hero">
+        <h1>Bem-vindo ao meu Site!</h1>
+        <p>Explore, Aprenda e Conecte-se</p>
+        <a href="#sobre" class="cta-btn">Saiba Mais</a>
+      </div>
+    </div>
+  </header>
 
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f7f7f7;
-  color: #333;
-}
+  <section id="sobre" class="section-about">
+    <div class="container">
+      <h2>Sobre o Projeto</h2>
+      <p>Este é um exemplo de um site feito para demonstrar como você pode usar HTML e CSS para criar algo bonito e funcional. A ideia é mostrar como aplicar conceitos modernos de design para criar uma experiência visual incrível.</p>
+    </div>
+  </section>
 
-header {
-  position: relative;
-  height: 100vh;
-  background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+  <section id="servicos" class="section-services">
+    <div class="container">
+      <h2>Serviços</h2>
+      <div class="service-cards">
+        <div class="service-card">
+          <i class="fas fa-code"></i>
+          <h3>Desenvolvimento Web</h3>
+          <p>Criação de sites personalizados e responsivos para sua empresa ou projeto pessoal.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-paint-brush"></i>
+          <h3>Design Gráfico</h3>
+          <p>Designs criativos para logotipos, banners e materiais gráficos.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-rocket"></i>
+          <h3>Consultoria Digital</h3>
+          <p>Ajudamos a otimizar sua presença online para alcançar mais clientes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-.overlay {
-  background: rgba(0, 0, 0, 0.5);
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
+  <section id="contato" class="section-contact">
+    <div class="container">
+      <h2>Contato</h2>
+      <p>Entre em contato para saber mais sobre nossos serviços ou tirar dúvidas.</p>
+      <form action="#" method="POST">
+        <input type="text" placeholder="Seu nome" required>
+        <input type="email" placeholder="Seu e-mail" required>
+        <textarea placeholder="Sua mensagem" required></textarea>
+        <button type="submit" class="cta-btn">Enviar Mensagem</button>
+      </form>
+    </div>
+  </section>
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-
-.navbar .logo {
-  font-size: 30px;
-  font-weight: bold;
-  color: #fff;
-  text-transform: uppercase;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-.nav-links li a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 18px;
-  text-transform: uppercase;
-}
-
-.hero {
-  text-align: center;
-  color: #fff;
-  z-index: 10;
-}
-
-.hero h1 {
-  font-size: 60px;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  font-size: 24px;
-  margin-bottom: 40px;
-}
-
-.cta-btn {
-  padding: 12px 30px;
-  background-color: #FF6347;
-  color: #fff;
-  text-decoration: none;
-  font-size: 18px;
-  border-radius: 5px;
-}
-
-.cta-btn:hover {
-  background-color: #FF4500;
-}
-
-.section-about, .section-services, .section-contact {
-  padding: 80px 0;
-  text-align: center;
-  background-color: #fff;
-}
-
-.container {
-  width: 80%;
-  margin: 0 auto;
-}
-
-h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
-}
-
-p {
-  font-size: 18px;
-  line-height: 1.6;
-}
-
-.service-cards {
-  display: flex;
-  gap: 30px;
-  justify-content: center;
-  margin-top: 30px;
-}
-
-.service-card {
-  background-color: #f1f1f1;
-  padding: 30px;
-  width: 300px;
-  text-align: center;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.service-card i {
-  font-size: 40px;
-  color: #FF6347;
-  margin-bottom: 20px;
-}
-
-.service-card h3 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.service-card p {
-  font-size: 16px;
-}
-
-footer {
-  background-color: #333;
-  color: #fff;
-  padding: 40px 0;
-  text-align: center;
-}
-
-.social-links a {
-  color: #fff;
-  font-size: 24px;
-  margin: 0 10px;
-  text-decoration: none;
-}
-
-.social-links a:hover {
-  color: #FF6347;
-}
+  <footer class="footer">
+    <p>&copy; 2026 Meu Site. Todos os direitos reservados.</p>
+    <div class="social-links">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+  </footer>
+</body>
+</html>
