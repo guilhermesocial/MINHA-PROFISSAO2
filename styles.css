@@ -6,8 +6,9 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f7f7f7;
-  color: #333;
+  background-color: #1d1d1d;
+  color: #fff;
+  line-height: 1.6;
 }
 
 header {
@@ -17,10 +18,12 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #fff;
+  text-align: center;
 }
 
 .overlay {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   position: absolute;
   top: 0;
   left: 0;
@@ -47,7 +50,7 @@ header {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 30px;
 }
 
 .nav-links li a {
@@ -55,12 +58,7 @@ header {
   text-decoration: none;
   font-size: 18px;
   text-transform: uppercase;
-}
-
-.hero {
-  text-align: center;
-  color: #fff;
-  z-index: 10;
+  letter-spacing: 1px;
 }
 
 .hero h1 {
@@ -70,16 +68,16 @@ header {
 
 .hero p {
   font-size: 24px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .cta-btn {
   padding: 12px 30px;
   background-color: #FF6347;
   color: #fff;
-  text-decoration: none;
   font-size: 18px;
   border-radius: 5px;
+  text-decoration: none;
 }
 
 .cta-btn:hover {
@@ -87,9 +85,9 @@ header {
 }
 
 .section-about, .section-salary, .section-enem, .section-contact {
-  padding: 80px 0;
+  padding: 80px 20px;
   text-align: center;
-  background-color: #fff;
+  background-color: #2d2d2d;
 }
 
 .container {
@@ -100,16 +98,16 @@ header {
 h2 {
   font-size: 36px;
   margin-bottom: 20px;
+  color: #FF6347;
 }
 
 p {
   font-size: 18px;
-  line-height: 1.6;
+  margin-bottom: 20px;
 }
 
 ul {
   list-style-type: none;
-  margin: 20px 0;
   padding: 0;
 }
 
@@ -129,10 +127,38 @@ ul li {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+input, textarea {
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+}
+
+button {
+  padding: 12px 20px;
+  background-color: #FF6347;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #FF4500;
+}
+
 footer {
   background-color: #333;
   color: #fff;
-  padding: 40px 0;
+  padding: 20px 0;
   text-align: center;
 }
 
