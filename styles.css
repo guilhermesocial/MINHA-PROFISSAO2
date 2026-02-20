@@ -1,110 +1,186 @@
-/* Configurações Globais */
+:root {
+    --primary: #3b82f6;
+    --dark-blue: #0f172a;
+    --accent: #60a5fa;
+    --white: #ffffff;
+    --gray: #64748b;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 body {
-    background-color: #f4f7f6;
-    color: #333;
-    line-height: 1.6;
+    background-color: #f8fafc;
+    color: var(--dark-blue);
 }
 
 .container {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 0 20px;
 }
 
-/* Header */
-header {
-    background: #2c3e50;
-    color: #fff;
-    padding: 60px 0;
-    text-align: center;
-    border-bottom: 5px solid #3498db;
+/* Navbar */
+nav {
+    background: var(--dark-blue);
+    padding: 20px 0;
+    color: white;
 }
 
-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* Seções */
-section {
-    margin: 40px 0;
-    background: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+.logo {
+    font-weight: 800;
+    font-size: 1.5rem;
 }
 
-h2, h3 {
-    color: #2c3e50;
-    margin-bottom: 15px;
-    border-left: 5px solid #3498db;
-    padding-left: 10px;
+.logo span { color: var(--primary); }
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 0.9rem;
+    transition: 0.3s;
 }
 
-/* Galeria de Imagens */
-.grid-imagens {
+.menu a:hover { color: var(--primary); }
+
+.btn-aluno {
+    background: var(--primary);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: white;
+    padding: 100px 0;
+}
+
+.hero-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+}
+
+.badge {
+    background: rgba(59, 130, 246, 0.2);
+    color: var(--accent);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    margin: 20px 0;
+    line-height: 1.1;
+}
+
+.hero-text h1 span { color: var(--primary); }
+
+.hero-btns { margin-top: 30px; }
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+/* Cards de Salário */
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin: 60px 0 40px;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
-.card-img img {
-    width: 100%;
-    border-radius: 8px;
-    transition: transform 0.3s;
-}
-
-.card-img img:hover {
-    transform: scale(1.02);
-}
-
-.card-img p {
+.card {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
     text-align: center;
-    font-weight: bold;
-    margin-top: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
 }
 
-/* Tabelas e Listas */
-.info-box {
-    margin-bottom: 30px;
+.card.highlight {
+    border: 2px solid var(--primary);
+    transform: scale(1.05);
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin: 10px 0;
+}
+
+/* Tabela ENEM */
+.bg-dark {
+    background: #0f172a;
+    padding: 80px 0;
+    margin-top: 80px;
+}
+
+.white { color: white; }
+
+.table-container {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 15px;
 }
 
-th, td {
-    border: 1px solid #ddd;
-    padding: 12px;
-    text-align: left;
-}
+th { background: #f1f5f9; padding: 20px; text-align: left; }
+td { padding: 20px; border-top: 1px solid #f1f5f9; }
 
-th {
-    background-color: #3498db;
-    color: white;
-}
+.tag-high { color: #ef4444; font-weight: bold; }
 
-/* Footer */
 footer {
+    padding: 40px;
     text-align: center;
-    padding: 30px;
-    background: #2c3e50;
-    color: white;
-    margin-top: 50px;
+    color: var(--gray);
+    font-size: 0.9rem;
 }
 
-/* Responsividade */
+/* Responsivo */
 @media (max-width: 768px) {
-    .grid-imagens {
-        grid-template-columns: 1fr;
-    }
+    .hero-grid, .cards-grid { grid-template-columns: 1fr; }
+    .hero-text h1 { font-size: 2.5rem; }
 }

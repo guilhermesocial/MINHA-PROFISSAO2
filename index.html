@@ -3,83 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carreira em TI - Guia Completo</title>
+    <title>Carreira TI - O Futuro é Agora</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header>
-        <div class="container">
-            <h1>Profissão: Tecnologia da Informação</h1>
-            <p>Construindo o futuro através do código e da inovação.</p>
+    <nav>
+        <div class="container nav-content">
+            <div class="logo">TI<span>MASTER</span></div>
+            <div class="menu">
+                <a href="#sobre">Início</a>
+                <a href="#salarios">Salários</a>
+                <a href="#enem">ENEM</a>
+            </div>
+            <button class="btn-aluno">Área do Aluno</button>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container hero-grid">
+            <div class="hero-text">
+                <span class="badge">Carreira do Futuro</span>
+                <h1>Transforme o mundo através da <span>Tecnologia</span></h1>
+                <p>O mercado de TI não para de crescer. Descubra como ingressar na profissão que une inovação, altos salários e flexibilidade.</p>
+                <div class="hero-btns">
+                    <button class="btn-primary">Conhecer Cursos</button>
+                    <button class="btn-secondary">Falar com Consultor</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1573496130141-2097af0139a2?auto=format&fit=crop&w=600&q=80" alt="Profissional de TI">
+            </div>
         </div>
     </header>
 
-    <main class="container">
-        
-        <section id="sobre">
-            <h2>Introdução sobre a Profissão</h2>
-            <p>A área de TI é vasta e envolve o gerenciamento de informações por meio de redes, software e hardware. O profissional de TI pode atuar desde o desenvolvimento de aplicativos (Dev), segurança de dados (Cybersecurity) até a inteligência artificial.</p>
-            <p>É uma carreira que exige <strong>aprendizado contínuo</strong>, raciocínio lógico e habilidade para resolver problemas complexos.</p>
-        </section>
-
-        <section id="galeria">
-            <div class="grid-imagens">
-                <div class="card-img">
-                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=500&q=60" alt="Programação">
-                    <p>Desenvolvimento de Software</p>
-                </div>
-                <div class="card-img">
-                    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc51?auto=format&fit=crop&w=500&q=60" alt="Servidores">
-                    <p>Infraestrutura e Redes</p>
-                </div>
+    <section id="salarios" class="container">
+        <h2 class="section-title">Média Salarial 2026</h2>
+        <div class="cards-grid">
+            <div class="card">
+                <h3>Júnior</h3>
+                <p class="price">R$ 4.500</p>
+                <span>Média inicial</span>
             </div>
-        </section>
-
-        <section id="dados">
-            <div class="info-box">
-                <h3>Média Salarial</h3>
-                <p>Os salários em TI variam conforme a experiência:</p>
-                <ul>
-                    <li><strong>Júnior:</strong> R$ 3.500,00 - R$ 5.500,00</li>
-                    <li><strong>Pleno:</strong> R$ 6.000,00 - R$ 10.000,00</li>
-                    <li><strong>Sênior:</strong> R$ 11.000,00 - R$ 25.000,00+</li>
-                </ul>
-                <small>*Valores médios baseados no mercado brasileiro em 2025/2026.</small>
+            <div class="card highlight">
+                <h3>Pleno</h3>
+                <p class="price">R$ 9.200</p>
+                <span>Profissional focado</span>
             </div>
+            <div class="card">
+                <h3>Sênior</h3>
+                <p class="price">R$ 16.000+</p>
+                <span>Líder técnico</span>
+            </div>
+        </div>
+    </section>
 
-            <div class="info-box">
-                <h3>Nota de Corte ENEM (SiSU)</h3>
-                <p>Para cursos como Ciência da Computação ou Engenharia de Software:</p>
+    <section id="enem" class="bg-dark">
+        <div class="container">
+            <h2 class="section-title white">Acesso via ENEM</h2>
+            <div class="table-container">
                 <table>
-                    <tr>
-                        <th>Instituição</th>
-                        <th>Modalidade</th>
-                        <th>Nota Média</th>
-                    </tr>
-                    <tr>
-                        <td>Universidades Federais (Top)</td>
-                        <td>Ampla Concorrência</td>
-                        <td>760 - 820 pts</td>
-                    </tr>
-                    <tr>
-                        <td>Universidades Estaduais</td>
-                        <td>Ampla Concorrência</td>
-                        <td>720 - 780 pts</td>
-                    </tr>
-                    <tr>
-                        <td>Institutos Federais</td>
-                        <td>Cotas / Geral</td>
-                        <td>650 - 710 pts</td>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th>Curso</th>
+                            <th>Média de Corte</th>
+                            <th>Dificuldade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Ciência da Computação</td>
+                            <td>785.50 pts</td>
+                            <td><span class="tag-high">Alta</span></td>
+                        </tr>
+                        <tr>
+                            <td>Engenharia de Software</td>
+                            <td>760.20 pts</td>
+                            <td><span class="tag-med">Média</span></td>
+                        </tr>
+                        <tr>
+                            <td>Análise de Sistemas</td>
+                            <td>690.15 pts</td>
+                            <td><span class="tag-low">Acessível</span></td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
-        </section>
-
-    </main>
+        </div>
+    </section>
 
     <footer>
-        <p>&copy; 2026 Guia de Carreiras TI - Feito para futuros talentos.</p>
+        <p>&copy; 2026 TIMASTER - Todos os direitos reservados.</p>
     </footer>
 
 </body>
