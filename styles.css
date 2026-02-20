@@ -13,7 +13,7 @@ body {
 header {
   position: relative;
   height: 100vh;
-  background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+  background: url('https://via.placeholder.com/1920x1080.png?text=Futuro+da+Tecnologia') no-repeat center center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -86,7 +86,7 @@ header {
   background-color: #FF4500;
 }
 
-.section-about, .section-services, .section-contact {
+.section-about, .section-salary, .section-enem, .section-contact {
   padding: 80px 0;
   text-align: center;
   background-color: #fff;
@@ -107,35 +107,26 @@ p {
   line-height: 1.6;
 }
 
-.service-cards {
-  display: flex;
-  gap: 30px;
-  justify-content: center;
+ul {
+  list-style-type: none;
+  margin: 20px 0;
+  padding: 0;
+}
+
+ul li {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.image-container {
   margin-top: 30px;
 }
 
-.service-card {
-  background-color: #f1f1f1;
-  padding: 30px;
-  width: 300px;
-  text-align: center;
+.image-container img {
+  width: 100%;
+  height: auto;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.service-card i {
-  font-size: 40px;
-  color: #FF6347;
-  margin-bottom: 20px;
-}
-
-.service-card h3 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.service-card p {
-  font-size: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 footer {
