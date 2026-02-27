@@ -3,108 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TI | The Future is Code</title>
+    <title>SISTEMA TI | INFO-HUB</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Fontes e Ícones -->
     <link href="https://fonts.googleapis.com" rel="stylesheet">
-    <script src="https://unpkg.com"></script>
 </head>
 <body>
 
-    <div class="grid-background"></div>
+    <div class="scanline"></div>
 
-    <header>
-        <nav class="glass">
-            <div class="logo">CORE<span>_TI</span></div>
-            <ul>
-                <li><a href="#sobre">INFO</a></li>
-                <li><a href="#salarios">CASH</a></li>
-                <li><a href="#enem">ENEM</a></li>
-            </ul>
-        </nav>
-        
-        <div class="hero">
-            <h1 class="glitch" data-text="TECNOLOGIA DA INFORMAÇÃO">TECNOLOGIA DA INFORMAÇÃO</h1>
-            <p>Onde o código se torna realidade e o futuro é construído hoje.</p>
-            <div class="hero-btns">
-                <a href="#sobre" class="btn-neon">EXPLORAR SISTEMA</a>
-            </div>
+    <header class="main-header">
+        <div class="nav-container">
+            <div class="logo">TERMINAL_<span>TI</span></div>
+            <nav>
+                <a href="#about">SOBRE</a>
+                <a href="#stats">MÉTRICAS</a>
+                <a href="#edu">ENEM</a>
+            </nav>
         </div>
     </header>
 
-    <main class="container">
-        <!-- SOBRE -->
-        <section id="sobre" class="section-card glass">
-            <div class="badge">PROFILING_SYSTEM</div>
-            <h2>A Profissão do Amanhã</h2>
-            <div class="grid-2">
-                <div class="text-content">
-                    <p>A área de TI é o motor da economia global. Mais do que suporte técnico, o profissional de TI atual é um **arquiteto de soluções**, lidando com IA, infraestruturas em nuvem e segurança de dados.</p>
-                    <ul class="skill-list">
-                        <li><span>⚡</span> Alta Empregabilidade</li>
-                        <li><span>🌐</span> Trabalho Remoto Global</li>
-                        <li><span>🧠</span> Constante Evolução</li>
-                    </ul>
+    <main class="wrapper">
+        <!-- SEÇÃO INTRODUÇÃO -->
+        <section id="about" class="grid-section">
+            <div class="section-title">
+                <span class="code-tag">&lt;section&gt;</span>
+                <h2>INTRODUÇÃO_PROFISSÃO</h2>
+            </div>
+            <div class="content-box">
+                <div class="info-text">
+                    <p>A Tecnologia da Informação é o pilar da era digital. O profissional atua no desenvolvimento, gerenciamento e proteção de dados e sistemas. Áreas em alta incluem <strong>Cybersecurity, Cloud Architecture e Engenharia de IA.</strong></p>
                 </div>
-                <div class="img-container">
-                    <img src="https://images.unsplash.com" alt="Tech">
+                <div class="info-image">
+                    <img src="https://images.unsplash.com" alt="Código">
                 </div>
             </div>
         </section>
 
-        <!-- SALÁRIOS -->
-        <section id="salarios">
-            <h2 class="title-center">Média Salarial <small>(Brasil 2024)</small></h2>
-            <div class="salary-grid">
-                <div class="salary-card glass">
-                    <div class="icon">01</div>
-                    <h3>Júnior</h3>
-                    <p class="amount">R$ 4.500</p>
-                    <span class="label">ENTRY LEVEL</span>
+        <!-- SEÇÃO SALÁRIOS -->
+        <section id="stats" class="grid-section">
+            <div class="section-title">
+                <span class="code-tag">&lt;data&gt;</span>
+                <h2>MÉDIA_SALARIAL_BR</h2>
+            </div>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <label>JÚNIOR</label>
+                    <div class="value">R$ 4.5k</div>
+                    <div class="bar"><div class="fill" style="width: 30%"></div></div>
                 </div>
-                <div class="salary-card glass highlight">
-                    <div class="icon">02</div>
-                    <h3>Pleno</h3>
-                    <p class="amount">R$ 9.200</p>
-                    <span class="label">MID LEVEL</span>
+                <div class="metric-card">
+                    <label>PLENO</label>
+                    <div class="value">R$ 9.8k</div>
+                    <div class="bar"><div class="fill" style="width: 65%"></div></div>
                 </div>
-                <div class="salary-card glass">
-                    <div class="icon">03</div>
-                    <h3>Sênior</h3>
-                    <p class="amount">R$ 16.000+</p>
-                    <span class="label">EXPERT</span>
+                <div class="metric-card">
+                    <label>SÊNIOR</label>
+                    <div class="value">R$ 16k+</div>
+                    <div class="bar"><div class="fill" style="width: 100%"></div></div>
                 </div>
             </div>
         </section>
 
-        <!-- ENEM -->
-        <section id="enem" class="section-card glass">
-            <h2>Nota de Corte ENEM</h2>
-            <p class="sub">Acesso via SISU para cursos de tecnologia (médias nacionais):</p>
-            <div class="table-container">
-                <table>
+        <!-- SEÇÃO ENEM -->
+        <section id="edu" class="grid-section">
+            <div class="section-title">
+                <span class="code-tag">&lt;access&gt;</span>
+                <h2>NOTA_DE_CORTE_ENEM</h2>
+            </div>
+            <div class="table-frame">
+                <table class="data-table">
                     <thead>
                         <tr>
-                            <th>Instituição</th>
-                            <th>Ampla Concorrência</th>
-                            <th>Status</th>
+                            <th>CATEGORIA</th>
+                            <th>PONTUAÇÃO</th>
+                            <th>DIFICULDADE</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>USP / UNICAMP / UFRJ</td>
-                            <td><span class="tag-red">780 - 820</span></td>
-                            <td>Crítico</td>
+                            <td>Elite (USP/UFRJ)</td>
+                            <td>795.50</td>
+                            <td class="status-high">MÁXIMA</td>
                         </tr>
                         <tr>
-                            <td>UFMG / UFRGS / UFSC</td>
-                            <td><span class="tag-blue">740 - 770</span></td>
-                            <td>Elevado</td>
+                            <td>Federais Gerais</td>
+                            <td>740.20</td>
+                            <td class="status-mid">ALTA</td>
                         </tr>
                         <tr>
-                            <td>IFs e Estaduais</td>
-                            <td><span class="tag-green">680 - 730</span></td>
-                            <td>Estável</td>
+                            <td>Institutos Tech</td>
+                            <td>690.00</td>
+                            <td class="status-low">MÉDIA</td>
                         </tr>
                     </tbody>
                 </table>
@@ -112,10 +101,9 @@
         </section>
     </main>
 
-    <footer>
-        <p>TERMINAL_READY // 2024 // CODE_BY_AI</p>
+    <footer class="main-footer">
+        <p>SISTEMA OPERACIONAL TI v1.0 | 2024</p>
     </footer>
 
-    <script>lucide.createIcons();</script>
 </body>
 </html>
