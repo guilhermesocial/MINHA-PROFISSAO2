@@ -3,106 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SISTEMA TI | INFO-HUB</title>
+    <title>HUB TECNOLOGIA | CARREIRA</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com" rel="stylesheet">
 </head>
 <body>
 
-    <div class="scanline"></div>
-
-    <header class="main-header">
-        <div class="nav-container">
-            <div class="logo">TERMINAL_<span>TI</span></div>
+    <!-- CABEÇALHO -->
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">TECH<span>SYSTEM</span></div>
             <nav>
-                <a href="#about">SOBRE</a>
-                <a href="#stats">MÉTRICAS</a>
-                <a href="#edu">ENEM</a>
+                <ul class="nav-links">
+                    <li><a href="#sobre">SOBRE</a></li>
+                    <li><a href="#salario">SALÁRIOS</a></li>
+                    <li><a href="#enem">ENEM</a></li>
+                </ul>
             </nav>
         </div>
     </header>
 
-    <main class="wrapper">
-        <!-- SEÇÃO INTRODUÇÃO -->
-        <section id="about" class="grid-section">
-            <div class="section-title">
-                <span class="code-tag">&lt;section&gt;</span>
-                <h2>INTRODUÇÃO_PROFISSÃO</h2>
-            </div>
-            <div class="content-box">
-                <div class="info-text">
-                    <p>A Tecnologia da Informação é o pilar da era digital. O profissional atua no desenvolvimento, gerenciamento e proteção de dados e sistemas. Áreas em alta incluem <strong>Cybersecurity, Cloud Architecture e Engenharia de IA.</strong></p>
+    <!-- HERO / BANNER PRINCIPAL -->
+    <section class="hero-banner">
+        <div class="hero-overlay">
+            <h1>PROFISSÃO T.I.</h1>
+            <p>O MOTOR DA EVOLUÇÃO DIGITAL MUNDIAL</p>
+        </div>
+    </section>
+
+    <main class="container">
+        
+        <!-- SEÇÃO: SOBRE -->
+        <section id="sobre" class="content-section">
+            <div class="grid-layout">
+                <div class="text-block">
+                    <span class="label">VISÃO GERAL</span>
+                    <h2>O QUE É SER UM PROFISSIONAL DE T.I.?</h2>
+                    <p>A Tecnologia da Informação abrange o desenvolvimento de softwares, gestão de redes, segurança cibernética e inteligência artificial. É uma carreira dinâmica que exige aprendizado constante e oferece flexibilidade geográfica.</p>
                 </div>
-                <div class="info-image">
-                    <img src="https://images.unsplash.com" alt="Código">
+                <div class="image-block">
+                    <img src="https://images.unsplash.com" alt="Desenvolvimento de Software">
                 </div>
             </div>
         </section>
 
-        <!-- SEÇÃO SALÁRIOS -->
-        <section id="stats" class="grid-section">
-            <div class="section-title">
-                <span class="code-tag">&lt;data&gt;</span>
-                <h2>MÉDIA_SALARIAL_BR</h2>
+        <!-- SEÇÃO: SALÁRIOS -->
+        <section id="salario" class="content-section">
+            <div class="section-header">
+                <span class="label">DADOS FINANCEIROS</span>
+                <h2>MÉDIA SALARIAL NO BRASIL</h2>
             </div>
-            <div class="metrics-grid">
-                <div class="metric-card">
-                    <label>JÚNIOR</label>
-                    <div class="value">R$ 4.5k</div>
-                    <div class="bar"><div class="fill" style="width: 30%"></div></div>
+            
+            <div class="salary-grid">
+                <div class="card">
+                    <img src="https://images.unsplash.com" alt="Junior Level">
+                    <div class="card-info">
+                        <h3>NÍVEL JÚNIOR</h3>
+                        <p class="price">R$ 4.500,00</p>
+                        <p class="desc">Foco em execução e aprendizado técnico assistido.</p>
+                    </div>
                 </div>
-                <div class="metric-card">
-                    <label>PLENO</label>
-                    <div class="value">R$ 9.8k</div>
-                    <div class="bar"><div class="fill" style="width: 65%"></div></div>
+                <div class="card">
+                    <img src="https://images.unsplash.com" alt="Pleno Level">
+                    <div class="card-info">
+                        <h3>NÍVEL PLENO</h3>
+                        <p class="price">R$ 9.800,00</p>
+                        <p class="desc">Autonomia em projetos e resolução de problemas complexos.</p>
+                    </div>
                 </div>
-                <div class="metric-card">
-                    <label>SÊNIOR</label>
-                    <div class="value">R$ 16k+</div>
-                    <div class="bar"><div class="fill" style="width: 100%"></div></div>
+                <div class="card">
+                    <img src="https://images.unsplash.com" alt="Senior Level">
+                    <div class="card-info">
+                        <h3>NÍVEL SÊNIOR</h3>
+                        <p class="price">R$ 16.500,00+</p>
+                        <p class="desc">Liderança técnica, arquitetura e decisões estratégicas.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- SEÇÃO ENEM -->
-        <section id="edu" class="grid-section">
-            <div class="section-title">
-                <span class="code-tag">&lt;access&gt;</span>
-                <h2>NOTA_DE_CORTE_ENEM</h2>
-            </div>
-            <div class="table-frame">
-                <table class="data-table">
-                    <thead>
-                        <tr>
-                            <th>CATEGORIA</th>
-                            <th>PONTUAÇÃO</th>
-                            <th>DIFICULDADE</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Elite (USP/UFRJ)</td>
-                            <td>795.50</td>
-                            <td class="status-high">MÁXIMA</td>
-                        </tr>
-                        <tr>
-                            <td>Federais Gerais</td>
-                            <td>740.20</td>
-                            <td class="status-mid">ALTA</td>
-                        </tr>
-                        <tr>
-                            <td>Institutos Tech</td>
-                            <td>690.00</td>
-                            <td class="status-low">MÉDIA</td>
-                        </tr>
-                    </tbody>
-                </table>
+        <!-- SEÇÃO: ENEM -->
+        <section id="enem" class="content-section">
+            <div class="grid-layout reverse">
+                <div class="text-block">
+                    <span class="label">INGRESSO ACADÊMICO</span>
+                    <h2>NOTA DE CORTE (SISU)</h2>
+                    <p>A concorrência para cursos como Engenharia de Software e Ciência da Computação está entre as mais altas do país.</p>
+                    
+                    <ul class="data-list">
+                        <li><strong>AMPLA CONCORRÊNCIA:</strong> 760 - 810 Pontos</li>
+                        <li><strong>COTAS (EP):</strong> 690 - 730 Pontos</li>
+                        <li><strong>INSTITUTOS FEDERAIS:</strong> 710 - 750 Pontos</li>
+                    </ul>
+                </div>
+                <div class="image-block">
+                    <img src="https://images.unsplash.com" alt="Estudos e Notas">
+                </div>
             </div>
         </section>
+
     </main>
 
-    <footer class="main-footer">
-        <p>SISTEMA OPERACIONAL TI v1.0 | 2024</p>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 TECHSYSTEM HUB - TODOS OS DIREITOS RESERVADOS</p>
+        </div>
     </footer>
 
 </body>
