@@ -3,55 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carreira Tech 2026</title>
+    <title>Explorando TI | Carreira do Futuro</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
 </head>
 <body>
+
     <header>
-        <h1>Guia de Carreira: Tecnologia</h1>
-        <p>Tudo o que você precisa saber para começar.</p>
+        <nav>
+            <div class="logo">TECH<span>CAREER</span></div>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#salarios">Salários</a></li>
+                <li><a href="#enem">ENEM</a></li>
+            </ul>
+        </nav>
+        <div class="hero">
+            <h1>O Universo da Tecnologia da Informação</h1>
+            <p>Construindo o amanhã através de linhas de código e inovação.</p>
+        </div>
     </header>
 
     <main>
-        <section id="enem">
-            <h2>Nota do ENEM</h2>
-            <p>Para cursar Ciência da Computação ou Engenharia de Software em universidades públicas, a nota de corte costuma variar entre <strong>720 e 800 pontos</strong>.</p>
+        <!-- SEÇÃO SOBRE -->
+        <section id="sobre" class="container">
+            <h2>Sobre a Profissão</h2>
+            <div class="content-flex">
+                <div class="text">
+                    <p>A Tecnologia da Informação (TI) é o conjunto de todas as atividades e soluções providas por recursos de computação. Trabalhar com TI não é apenas "consertar computadores", mas sim gerenciar o fluxo de dados, desenvolver softwares, garantir a segurança cibernética e criar infraestruturas complexas que mantêm o mundo conectado.</p>
+                    <p>As áreas são vastas: <strong>Desenvolvimento Web, Ciência de Dados, Inteligência Artificial e Cloud Computing</strong> são apenas a ponta do iceberg.</p>
+                </div>
+                <div class="image-box">
+                    <img src="https://images.unsplash.com" alt="Programação">
+                </div>
+            </div>
         </section>
 
-        <section id="salarios">
-            <h2>Salários e Benefícios</h2>
-            <table>
-                <tr>
-                    <th>Nível</th>
-                    <th>Média Salarial</th>
-                </tr>
-                <tr>
-                    <td>Estagiário</td>
-                    <td>R$ 1.500 - R$ 2.500</td>
-                </tr>
-                <tr>
-                    <td>Júnior</td>
-                    <td>R$ 4.000 - R$ 6.500</td>
-                </tr>
-                <tr>
-                    <td>Pleno/Sênior</td>
-                    <td>R$ 9.000 - R$ 20.000+</td>
-                </tr>
-            </table>
-            <p><strong>Benefícios comuns:</strong> Trabalho remoto (Home Office), auxílio equipamento, bônus por performance e plano de saúde internacional.</p>
+        <!-- SEÇÃO SALÁRIOS -->
+        <section id="salarios" class="bg-dark">
+            <div class="container">
+                <h2>Média Salarial</h2>
+                <div class="grid-cards">
+                    <div class="card">
+                        <h3>Júnior</h3>
+                        <p class="price">R$ 3.500 - R$ 5.500</p>
+                        <p>Início de carreira, foco em aprendizado e execução de tarefas básicas.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Pleno</h3>
+                        <p class="price">R$ 6.000 - R$ 10.000</p>
+                        <p>Profissionais com autonomia e domínio de ferramentas específicas.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Sênior</h3>
+                        <p class="price">R$ 12.000 +</p>
+                        <p>Liderança técnica, arquitetura de sistemas e decisões estratégicas.</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section id="aprendizado">
-            <h2>Começando com HTML & CSS</h2>
-            <p>HTML é a estrutura do seu site, enquanto o CSS é a beleza e o estilo.</p>
-            <div class="code-box">
-                <code>&lt;button&gt;Clique Aqui&lt;/button&gt;</code>
+        <!-- SEÇÃO ENEM -->
+        <section id="enem" class="container">
+            <h2>Nota de Corte (SISU/ENEM)</h2>
+            <p>Para cursos como Ciência da Computação, Engenharia de Software e Sistemas de Informação, a concorrência é alta. Confira as médias estimadas:</p>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Instituição</th>
+                            <th>Média Geral</th>
+                            <th>Cotas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Universidades Federais (UFRJ, USP, UFMG)</td>
+                            <td>760 - 810 pts</td>
+                            <td>680 - 720 pts</td>
+                        </tr>
+                        <tr>
+                            <td>Universidades Estaduais e Institutos Federais</td>
+                            <td>700 - 750 pts</td>
+                            <td>640 - 680 pts</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 - Guia de TI para Estudantes</p>
+        <p>&copy; 2024 TechCareer Hub. O futuro é agora.</p>
     </footer>
+
 </body>
 </html>
