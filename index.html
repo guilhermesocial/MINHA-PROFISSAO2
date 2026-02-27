@@ -3,89 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explorando TI | Carreira do Futuro</title>
+    <title>TI | The Future is Code</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Fontes e Ícones -->
     <link href="https://fonts.googleapis.com" rel="stylesheet">
+    <script src="https://unpkg.com"></script>
 </head>
 <body>
 
+    <div class="grid-background"></div>
+
     <header>
-        <nav>
-            <div class="logo">TECH<span>CAREER</span></div>
+        <nav class="glass">
+            <div class="logo">CORE<span>_TI</span></div>
             <ul>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#salarios">Salários</a></li>
+                <li><a href="#sobre">INFO</a></li>
+                <li><a href="#salarios">CASH</a></li>
                 <li><a href="#enem">ENEM</a></li>
             </ul>
         </nav>
+        
         <div class="hero">
-            <h1>O Universo da Tecnologia da Informação</h1>
-            <p>Construindo o amanhã através de linhas de código e inovação.</p>
+            <h1 class="glitch" data-text="TECNOLOGIA DA INFORMAÇÃO">TECNOLOGIA DA INFORMAÇÃO</h1>
+            <p>Onde o código se torna realidade e o futuro é construído hoje.</p>
+            <div class="hero-btns">
+                <a href="#sobre" class="btn-neon">EXPLORAR SISTEMA</a>
+            </div>
         </div>
     </header>
 
-    <main>
-        <!-- SEÇÃO SOBRE -->
-        <section id="sobre" class="container">
-            <h2>Sobre a Profissão</h2>
-            <div class="content-flex">
-                <div class="text">
-                    <p>A Tecnologia da Informação (TI) é o conjunto de todas as atividades e soluções providas por recursos de computação. Trabalhar com TI não é apenas "consertar computadores", mas sim gerenciar o fluxo de dados, desenvolver softwares, garantir a segurança cibernética e criar infraestruturas complexas que mantêm o mundo conectado.</p>
-                    <p>As áreas são vastas: <strong>Desenvolvimento Web, Ciência de Dados, Inteligência Artificial e Cloud Computing</strong> são apenas a ponta do iceberg.</p>
+    <main class="container">
+        <!-- SOBRE -->
+        <section id="sobre" class="section-card glass">
+            <div class="badge">PROFILING_SYSTEM</div>
+            <h2>A Profissão do Amanhã</h2>
+            <div class="grid-2">
+                <div class="text-content">
+                    <p>A área de TI é o motor da economia global. Mais do que suporte técnico, o profissional de TI atual é um **arquiteto de soluções**, lidando com IA, infraestruturas em nuvem e segurança de dados.</p>
+                    <ul class="skill-list">
+                        <li><span>⚡</span> Alta Empregabilidade</li>
+                        <li><span>🌐</span> Trabalho Remoto Global</li>
+                        <li><span>🧠</span> Constante Evolução</li>
+                    </ul>
                 </div>
-                <div class="image-box">
-                    <img src="https://images.unsplash.com" alt="Programação">
-                </div>
-            </div>
-        </section>
-
-        <!-- SEÇÃO SALÁRIOS -->
-        <section id="salarios" class="bg-dark">
-            <div class="container">
-                <h2>Média Salarial</h2>
-                <div class="grid-cards">
-                    <div class="card">
-                        <h3>Júnior</h3>
-                        <p class="price">R$ 3.500 - R$ 5.500</p>
-                        <p>Início de carreira, foco em aprendizado e execução de tarefas básicas.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Pleno</h3>
-                        <p class="price">R$ 6.000 - R$ 10.000</p>
-                        <p>Profissionais com autonomia e domínio de ferramentas específicas.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Sênior</h3>
-                        <p class="price">R$ 12.000 +</p>
-                        <p>Liderança técnica, arquitetura de sistemas e decisões estratégicas.</p>
-                    </div>
+                <div class="img-container">
+                    <img src="https://images.unsplash.com" alt="Tech">
                 </div>
             </div>
         </section>
 
-        <!-- SEÇÃO ENEM -->
-        <section id="enem" class="container">
-            <h2>Nota de Corte (SISU/ENEM)</h2>
-            <p>Para cursos como Ciência da Computação, Engenharia de Software e Sistemas de Informação, a concorrência é alta. Confira as médias estimadas:</p>
-            <div class="table-wrapper">
+        <!-- SALÁRIOS -->
+        <section id="salarios">
+            <h2 class="title-center">Média Salarial <small>(Brasil 2024)</small></h2>
+            <div class="salary-grid">
+                <div class="salary-card glass">
+                    <div class="icon">01</div>
+                    <h3>Júnior</h3>
+                    <p class="amount">R$ 4.500</p>
+                    <span class="label">ENTRY LEVEL</span>
+                </div>
+                <div class="salary-card glass highlight">
+                    <div class="icon">02</div>
+                    <h3>Pleno</h3>
+                    <p class="amount">R$ 9.200</p>
+                    <span class="label">MID LEVEL</span>
+                </div>
+                <div class="salary-card glass">
+                    <div class="icon">03</div>
+                    <h3>Sênior</h3>
+                    <p class="amount">R$ 16.000+</p>
+                    <span class="label">EXPERT</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ENEM -->
+        <section id="enem" class="section-card glass">
+            <h2>Nota de Corte ENEM</h2>
+            <p class="sub">Acesso via SISU para cursos de tecnologia (médias nacionais):</p>
+            <div class="table-container">
                 <table>
                     <thead>
                         <tr>
                             <th>Instituição</th>
-                            <th>Média Geral</th>
-                            <th>Cotas</th>
+                            <th>Ampla Concorrência</th>
+                            <th>Status</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Universidades Federais (UFRJ, USP, UFMG)</td>
-                            <td>760 - 810 pts</td>
-                            <td>680 - 720 pts</td>
+                            <td>USP / UNICAMP / UFRJ</td>
+                            <td><span class="tag-red">780 - 820</span></td>
+                            <td>Crítico</td>
                         </tr>
                         <tr>
-                            <td>Universidades Estaduais e Institutos Federais</td>
-                            <td>700 - 750 pts</td>
-                            <td>640 - 680 pts</td>
+                            <td>UFMG / UFRGS / UFSC</td>
+                            <td><span class="tag-blue">740 - 770</span></td>
+                            <td>Elevado</td>
+                        </tr>
+                        <tr>
+                            <td>IFs e Estaduais</td>
+                            <td><span class="tag-green">680 - 730</span></td>
+                            <td>Estável</td>
                         </tr>
                     </tbody>
                 </table>
@@ -94,8 +113,9 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 TechCareer Hub. O futuro é agora.</p>
+        <p>TERMINAL_READY // 2024 // CODE_BY_AI</p>
     </footer>
 
+    <script>lucide.createIcons();</script>
 </body>
 </html>
