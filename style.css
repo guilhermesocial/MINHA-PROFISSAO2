@@ -7,6 +7,8 @@
     --whatsapp: #25d366;
     --comment-bg: #1e2430;
     --comment-border: #2a2f3a;
+    --eua-blue: #002868;
+    --eua-red: #bf0a30;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -157,9 +159,27 @@ h1 span { color: var(--primary); }
 .label { color: var(--primary); font-weight: bold; letter-spacing: 2px; font-size: 0.8rem; display: block; margin-bottom: 10px; }
 h2 { font-size: 2.5rem; margin-bottom: 20px; }
 
-.img-box img { width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-.benefits-list { list-style: none; margin-top: 20px; }
-.benefits-list li { margin-bottom: 10px; font-weight: 600; color: #ddd; }
+/* BADGE PARA BANDEIRAS */
+.flag-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 5px 15px;
+    border-radius: 30px;
+    font-size: 1rem;
+    margin-left: 15px;
+}
+
+.flag-badge i {
+    color: var(--primary);
+}
+
+.flag-badge .fa-flag-usa {
+    background: linear-gradient(135deg, var(--eua-blue), var(--eua-red));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
 /* SALARY CARDS */
 .header-center { text-align: center; margin-bottom: 40px; }
@@ -171,9 +191,53 @@ h2 { font-size: 2.5rem; margin-bottom: 20px; }
 .card-body { padding: 25px; }
 .price { font-size: 1.8rem; font-weight: 900; color: var(--primary); margin: 10px 0; }
 
+/* CARDS ESPECÍFICOS PARA EUA */
+.eua-card .price {
+    color: #ffd700;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+.eua-card .price-converted {
+    font-size: 0.9rem;
+    color: var(--gray);
+    margin-top: -5px;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+.eua-card.featured {
+    border: 2px solid #ffd700;
+}
+
+.salary-note {
+    margin-top: 30px;
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: var(--gray);
+    font-size: 0.9rem;
+    border-left: 4px solid var(--primary);
+}
+
+.salary-note i {
+    color: var(--primary);
+    font-size: 1.2rem;
+}
+
+.section-subtitle {
+    color: var(--gray);
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
 /* ENEM TABLE */
 .enem-table { margin-top: 20px; }
 .table-row { display: flex; justify-content: space-between; padding: 15px; background: rgba(255,255,255,0.03); margin-bottom: 10px; border-radius: 8px; border-left: 4px solid var(--primary); }
+
+.img-box img { width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
 
 /* SEÇÃO DE AVALIAÇÕES */
 .testimonials-section {
@@ -286,7 +350,7 @@ h2 { font-size: 2.5rem; margin-bottom: 20px; }
     display: block;
 }
 
-/* SEÇÃO DE COMENTÁRIOS - ADICIONADA */
+/* SEÇÃO DE COMENTÁRIOS */
 .comments-section {
     padding: 80px 0;
     background: linear-gradient(0deg, rgba(0, 210, 255, 0.02), transparent);
@@ -497,4 +561,78 @@ h2 { font-size: 2.5rem; margin-bottom: 20px; }
     transition: all 0.3s ease;
     font-size: 0.9rem;
     padding: 5px 10px;
-    border-radius: 20
+    border-radius: 20px;
+}
+
+.comment-like:hover,
+.comment-reply:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--primary);
+}
+
+.comment-like i.fas {
+    color: #ff3366;
+}
+
+/* FOOTER */
+.footer { padding: 40px; text-align: center; border-top: 1px solid rgba(255,255,255,0.05); color: var(--gray); font-size: 0.8rem; }
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .grid-layout { grid-template-columns: 1fr; text-align: center; }
+    h1 { font-size: 2.5rem; }
+    .nav-links { display: none; }
+    
+    /* Ajustes para mobile */
+    .search-container {
+        margin-left: 10px;
+        gap: 10px;
+    }
+    
+    .search-input {
+        width: 120px;
+    }
+    
+    .whatsapp-number {
+        display: none;
+    }
+    
+    .whatsapp-header {
+        padding: 8px 12px;
+    }
+    
+    .testimonials-stats {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .testimonial-card.featured {
+        transform: scale(1);
+    }
+
+    .flag-badge {
+        display: block;
+        margin: 10px 0 0 0;
+        text-align: center;
+    }
+
+    .salary-note {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .search-input {
+        width: 100px;
+        padding: 8px 10px;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+}
