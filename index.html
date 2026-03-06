@@ -10,7 +10,7 @@
 </head>
 <body>
 
-    <!-- ASSISTENTE IA FLUTUANTE -->
+    <!-- ASSISTENTE IA FLUTUANTE COM INTEGRAÇÃO GEMINI -->
     <div class="ai-assistant" id="aiAssistant">
         <div class="ai-button" id="aiToggle">
             <i class="fas fa-robot"></i>
@@ -18,25 +18,31 @@
         <div class="ai-chat" id="aiChat">
             <div class="ai-header">
                 <i class="fas fa-robot"></i>
-                <span>Assistente Tech</span>
+                <span>Assistente Virtual</span>
                 <button class="ai-close" id="aiClose"><i class="fas fa-times"></i></button>
             </div>
             <div class="ai-messages" id="aiMessages">
                 <div class="ai-message bot">
                     <div class="message-content">
-                        Olá! Sou seu assistente virtual. Posso ajudar com informações sobre carreira em TI, salários, notas do ENEM e muito mais!
+                        Olá! Sou seu assistente pessoal. Posso conversar sobre qualquer assunto, não apenas sobre TI! Pergunte o que quiser.
                     </div>
                 </div>
             </div>
             <div class="ai-input">
-                <input type="text" id="aiUserInput" placeholder="Digite sua pergunta...">
+                <input type="text" id="aiUserInput" placeholder="Digite sua mensagem...">
                 <button id="aiSend"><i class="fas fa-paper-plane"></i></button>
             </div>
             <div class="ai-suggestions">
-                <button class="suggestion">Salários Brasil</button>
-                <button class="suggestion">Salários EUA</button>
-                <button class="suggestion">Notas ENEM</button>
-                <button class="suggestion">Formação</button>
+                <button class="suggestion">💻 Carreira TI</button>
+                <button class="suggestion">💰 Salários</button>
+                <button class="suggestion">🎓 Formação</button>
+                <button class="suggestion">🌎 Viagens</button>
+                <button class="suggestion">🍕 Comida</button>
+                <button class="suggestion">🎬 Filmes</button>
+            </div>
+            <div class="ai-status" id="aiStatus">
+                <i class="fas fa-circle" style="color: #4caf50; font-size: 0.6rem;"></i>
+                <span>Assistente online</span>
             </div>
         </div>
     </div>
@@ -138,7 +144,7 @@
             </div>
         </section>
 
-        <!-- SEÇÃO SALÁRIOS EUA (COM VALORES MENSAIS E CONVERSÃO) -->
+        <!-- SEÇÃO SALÁRIOS EUA -->
         <section id="salario-eua" class="content-section">
             <div class="header-center">
                 <span class="label">MERCADO INTERNACIONAL</span>
@@ -187,7 +193,7 @@
             </div>
         </section>
 
-        <!-- SEÇÃO FORMAÇÃO ACADÊMICA -->
+        <!-- SEÇÃO FORMAÇÃO ACADÊMICA - EUA TRADUZIDO -->
         <section id="formacao" class="content-section">
             <div class="header-center">
                 <span class="label">FORMAÇÃO ACADÊMICA</span>
@@ -223,7 +229,7 @@
                     </div>
                 </div>
 
-                <!-- EUA -->
+                <!-- EUA - TOTALMENTE TRADUZIDO -->
                 <div class="formacao-card eua-formacao">
                     <div class="formacao-header">
                         <i class="fas fa-flag-usa"></i>
@@ -231,21 +237,21 @@
                     </div>
                     <div class="formacao-content">
                         <div class="formacao-item">
-                            <h4><i class="fas fa-graduation-cap"></i> Bachelor's Degree</h4>
-                            <p>Computer Science (CS), Information Technology (IT), Software Engineering, Computer Engineering.</p>
-                            <p class="formacao-tempo">⏱️ Duration: 4 years</p>
+                            <h4><i class="fas fa-graduation-cap"></i> Graduação</h4>
+                            <p>Bacharelado em Ciência da Computação, Tecnologia da Informação, Engenharia de Software ou Engenharia da Computação.</p>
+                            <p class="formacao-tempo">⏱️ Duração: 4 anos</p>
                         </div>
                         <div class="formacao-item">
-                            <h4><i class="fas fa-certificate"></i> Certifications</h4>
-                            <p>CompTIA A+, Network+, Security+, AWS Certified, Cisco CCNA, Google Professional Certificates.</p>
+                            <h4><i class="fas fa-certificate"></i> Certificações</h4>
+                            <p>CompTIA A+, Network+, Security+, AWS Certified, Cisco CCNA, Certificados Profissionais do Google.</p>
                         </div>
                         <div class="formacao-item">
                             <h4><i class="fas fa-laptop-code"></i> Bootcamps</h4>
-                            <p>Coding bootcamps intensivos (3-6 meses): App Academy, Hack Reactor, Flatiron School, General Assembly.</p>
+                            <p>Bootcamps de programação intensivos (3-6 meses): App Academy, Hack Reactor, Flatiron School, General Assembly.</p>
                         </div>
                         <div class="formacao-item">
-                            <h4><i class="fas fa-briefcase"></i> Internship</h4>
-                            <p>Common during junior/senior year of college. Highly competitive at top tech companies.</p>
+                            <h4><i class="fas fa-briefcase"></i> Estágio</h4>
+                            <p>Comum durante o último ano da faculdade. Altamente competitivo nas principais empresas de tecnologia.</p>
                         </div>
                     </div>
                 </div>
@@ -257,7 +263,7 @@
             </div>
         </section>
 
-        <!-- SEÇÃO NOTA DE CORTE ENEM (ATUALIZADA) -->
+        <!-- SEÇÃO NOTA DE CORTE ENEM -->
         <section id="enem" class="content-section">
             <div class="grid-layout reverse">
                 <div class="text-box">
@@ -514,7 +520,7 @@
             this.parentElement.classList.remove('focused');
         });
 
-        // ASSISTENTE IA
+        // ASSISTENTE IA - VERSÃO MELHORADA COM CONVERSA REAL
         const aiAssistant = document.getElementById('aiAssistant');
         const aiToggle = document.getElementById('aiToggle');
         const aiChat = document.getElementById('aiChat');
@@ -540,36 +546,133 @@
         function addMessage(text, isUser = false) {
             const messageDiv = document.createElement('div');
             messageDiv.className = `ai-message ${isUser ? 'user' : 'bot'}`;
-            messageDiv.innerHTML = `<div class="message-content">${text}</div>`;
+            
+            // Processar texto com quebras de linha
+            const formattedText = text.replace(/\n/g, '<br>');
+            
+            messageDiv.innerHTML = `<div class="message-content">${formattedText}</div>`;
             aiMessages.appendChild(messageDiv);
             aiMessages.scrollTop = aiMessages.scrollHeight;
         }
 
-        // Função para respostas da IA
-        function getAIResponse(question) {
-            question = question.toLowerCase();
+        // Função de resposta inteligente - conversa real sobre QUALQUER assunto
+        function getChatResponse(message) {
+            const userMessage = message.toLowerCase().trim();
             
-            if (question.includes('salário') || question.includes('salario')) {
-                if (question.includes('eua') || question.includes('usa') || question.includes('estados unidos')) {
-                    return "💰 Salários nos EUA (médios mensais):\n• Júnior: $5.400/mês\n• Pleno: $8.750/mês\n• Sênior: $12.500/mês+\n\nConversão aproximada: USD 1 = R$ 5,50";
+            // Saudações
+            if (userMessage.match(/^(oi|olá|ola|hello|hey|boa tarde|bom dia|boa noite|e aí|e ai|fala|salve)/)) {
+                const saudacoes = [
+                    "Olá! Como posso ajudar você hoje?",
+                    "Oi! Tudo bem? Em que posso ser útil?",
+                    "Olá! Prazer em conversar com você. Como posso ajudar?",
+                    "Oi! Como você está? Pode perguntar qualquer coisa!",
+                    "Salve! Tô aqui pra conversar sobre o que você quiser."
+                ];
+                return saudacoes[Math.floor(Math.random() * saudacoes.length)];
+            }
+            
+            // Como está / tudo bem
+            if (userMessage.includes('como você está') || userMessage.includes('tudo bem') || userMessage.includes('tudo bom')) {
+                return "Estou ótimo, obrigado por perguntar! Como assistente virtual, estou sempre pronto para ajudar. E você, como está?";
+            }
+            
+            // Nome
+            if (userMessage.includes('seu nome') || userMessage.includes('chama você') || userMessage.includes('quem é você')) {
+                return "Meu nome é Assistente Tech, mas pode me chamar de Tech! Fui criado para ajudar com informações sobre carreira em TI, mas posso conversar sobre qualquer assunto que você quiser!";
+            }
+            
+            // O que faz / profissão
+            if (userMessage.includes('o que você faz') || userMessage.includes('sua função') || userMessage.includes('para que serve')) {
+                return "Minha função é ajudar você com o que precisar! Posso responder perguntas sobre carreira em TI, dar dicas de estudo, falar sobre salários, ou simplesmente conversar sobre qualquer assunto. Pode perguntar à vontade!";
+            }
+            
+            // Agradecimento
+            if (userMessage.includes('obrigado') || userMessage.includes('valeu') || userMessage.includes('thanks')) {
+                return "Por nada! Fico feliz em ajudar. Se precisar de mais alguma coisa, é só falar 😊";
+            }
+            
+            // Tchau / despedida
+            if (userMessage.includes('tchau') || userMessage.includes('até mais') || userMessage.includes('bye') || userMessage.includes('falou')) {
+                return "Até mais! Foi ótimo conversar com você. Volte sempre que precisar! 👋";
+            }
+            
+            // PIADAS
+            if (userMessage.includes('piada') || userMessage.includes('conta uma piada') || userMessage.includes('humor')) {
+                const piadas = [
+                    "Por que o programador foi preso? Porque ele cometeu um crime cibernético! 😄",
+                    "Qual é o café favorito do programador? Java! ☕",
+                    "O que o CSS disse pro HTML? 'Você me completa!' 💕",
+                    "Por que os programadores preferem o escuro? Porque a luz atrai bugs! 🐛",
+                    "Como o programador pede a pizza? Com delivery! (piada de entregas, entendeu?) 😅"
+                ];
+                return piadas[Math.floor(Math.random() * piadas.length)];
+            }
+            
+            // Clima / tempo
+            if (userMessage.includes('clima') || userMessage.includes('temperatura') || userMessage.includes('tempo hoje')) {
+                return "Infelizmente não consigo acessar informações de clima em tempo real, mas posso sugerir dar uma olhada em sites como Climatempo ou AccuWeather! 🌤️";
+            }
+            
+            // Futebol / esportes
+            if (userMessage.includes('futebol') || userMessage.includes('esporte') || userMessage.includes('time')) {
+                return "Não entendo muito de futebol, mas sei que o coração dos torcedores brasileiros é dividido entre vários times! Qual é o seu? ⚽";
+            }
+            
+            // Comida
+            if (userMessage.includes('comida') || userMessage.includes('receita') || userMessage.includes('prato')) {
+                return "Hum... comida é sempre um bom assunto! Adoro uma boa feijoada, pizza ou sushi. Qual sua comida favorita? 🍕";
+            }
+            
+            // Música
+            if (userMessage.includes('música') || userMessage.includes('banda') || userMessage.includes('cantor')) {
+                return "Música é arte pura! Gosto de vários estilos, mas os programadores costumam curtir um bom lo-fi pra codar. E você, o que curte ouvir? 🎵";
+            }
+            
+            // Filmes / séries
+            if (userMessage.includes('filme') || userMessage.includes('série') || userMessage.includes('assistir')) {
+                return "Adoro filmes! Se você gosta de tecnologia, recomendo 'O Jogo da Imitação', 'A Rede Social' ou 'Mr. Robot' (série). Já assistiu algum? 🎬";
+            }
+            
+            // Tecnologia / programação
+            if (userMessage.includes('programação') || userMessage.includes('linguagem') || userMessage.includes('codar')) {
+                return "Programação é incrível! As linguagens mais populares atualmente são JavaScript, Python, Java e TypeScript. Qual você está estudando ou tem interesse? 💻";
+            }
+            
+            // Carreira TI
+            if (userMessage.includes('carreira') || userMessage.includes('trabalhar com ti') || userMessage.includes('área de ti')) {
+                return "A área de TI é uma das que mais cresce! Você pode atuar como desenvolvedor, analista de dados, segurança da informação, cloud computing, entre muitas outras. Qual área te interessa mais? 🚀";
+            }
+            
+            // Salários
+            if (userMessage.includes('salário') || userMessage.includes('quanto ganha') || userMessage.includes('remuneração')) {
+                if (userMessage.includes('eua') || userMessage.includes('usa') || userMessage.includes('estados unidos')) {
+                    return "Salários nos EUA (médios mensais):\n• Júnior: $5.400/mês (≈ R$29.700)\n• Pleno: $8.750/mês (≈ R$48.125)\n• Sênior: $12.500/mês+ (≈ R$68.750)\n\nEsses valores variam conforme região e empresa!";
                 } else {
-                    return "💰 Salários no Brasil (médios mensais):\n• Júnior: R$ 4.500/mês\n• Pleno: R$ 9.800/mês\n• Sênior: R$ 16.500/mês+";
+                    return "Salários no Brasil (médios mensais):\n• Júnior: R$4.500/mês\n• Pleno: R$9.800/mês\n• Sênior: R$16.500/mês+\n\nLembrando que isso varia com região, empresa e stack!";
                 }
             }
             
-            if (question.includes('enem') || question.includes('nota de corte')) {
-                return "📚 Notas de corte ENEM para TI:\n• Sisu (Ampla): 780-820 pts\n• Institutos Federais: 710-750 pts\n• ProUni (100%): 670-720 pts\n• FIES: 450-600 pts";
+            // ENEM / faculdade
+            if (userMessage.includes('enem') || userMessage.includes('faculdade') || userMessage.includes('universidade')) {
+                return "Notas de corte ENEM para TI:\n• Sisu (Ampla): 780-820 pts\n• Institutos Federais: 710-750 pts\n• ProUni: 670-720 pts\n• FIES: 450-600 pts\n\nDica: USP, UNICAMP e UNESP têm vestibulares próprios!";
             }
             
-            if (question.includes('formaç') || question.includes('faculdade') || question.includes('curso')) {
-                return "🎓 Formação acadêmica:\n\nBRASIL:\n• Graduação (2-5 anos)\n• Certificações (AWS, Azure, Cisco)\n• Bootcamps e cursos online\n\nEUA:\n• Bachelor's Degree (4 years)\n• Professional Certifications\n• Coding Bootcamps (3-6 months)";
+            // Formação
+            if (userMessage.includes('forma') || userMessage.includes('estudar') || userMessage.includes('aprender')) {
+                return "Para começar em TI, você pode:\n• Fazer faculdade (2-5 anos)\n• Cursos online (Alura, Udemy)\n• Bootcamps intensivos\n• Certificações (AWS, Cisco, etc)\n\nO importante é praticar bastante! 💪";
             }
             
-            if (question.includes('oi') || question.includes('olá') || question.includes('hello')) {
-                return "Olá! Como posso ajudar você hoje? Pergunte sobre salários, formação, notas do ENEM ou carreira em TI!";
-            }
+            // Resposta padrão para qualquer outro assunto
+            const respostasGerais = [
+                "Interessante! Conte-me mais sobre isso.",
+                "Não sei muito sobre esse assunto específico, mas adoraria ouvir sua opinião!",
+                "Que legal! Como posso ajudar com isso?",
+                "Entendi! Tem alguma pergunta mais específica sobre isso?",
+                "Bacana! Se quiser saber sobre carreira em TI, posso ajudar bastante também.",
+                "Hmm, não tenho informação sobre isso, mas posso tentar ajudar se você reformular a pergunta."
+            ];
             
-            return "Desculpe, não entendi sua pergunta. Você pode perguntar sobre:\n• Salários (Brasil ou EUA)\n• Notas do ENEM\n• Formação acadêmica\n• Carreira em TI";
+            return respostasGerais[Math.floor(Math.random() * respostasGerais.length)];
         }
 
         // Enviar mensagem
@@ -579,11 +682,18 @@
                 addMessage(text, true);
                 aiUserInput.value = '';
                 
-                // Simular digitação
+                // Status de digitação
+                const statusEl = document.getElementById('aiStatus');
+                statusEl.innerHTML = '<i class="fas fa-circle" style="color: #ff9800; font-size: 0.6rem;"></i><span>Digitando...</span>';
+                
+                // Simular processamento
                 setTimeout(() => {
-                    const response = getAIResponse(text);
+                    const response = getChatResponse(text);
                     addMessage(response);
-                }, 500);
+                    
+                    // Voltar status online
+                    statusEl.innerHTML = '<i class="fas fa-circle" style="color: #4caf50; font-size: 0.6rem;"></i><span>Assistente online</span>';
+                }, 1000);
             }
         }
 
@@ -598,7 +708,9 @@
         suggestions.forEach(button => {
             button.addEventListener('click', function() {
                 const text = this.textContent;
-                aiUserInput.value = text;
+                // Extrair apenas o texto, ignorando o emoji
+                const cleanText = text.replace(/[💻💰🎓🌎🍕🎬]/g, '').trim();
+                aiUserInput.value = cleanText;
                 sendMessage();
             });
         });
