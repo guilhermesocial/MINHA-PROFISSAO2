@@ -10,6 +10,37 @@
 </head>
 <body>
 
+    <!-- ASSISTENTE IA FLUTUANTE -->
+    <div class="ai-assistant" id="aiAssistant">
+        <div class="ai-button" id="aiToggle">
+            <i class="fas fa-robot"></i>
+        </div>
+        <div class="ai-chat" id="aiChat">
+            <div class="ai-header">
+                <i class="fas fa-robot"></i>
+                <span>Assistente Tech</span>
+                <button class="ai-close" id="aiClose"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="ai-messages" id="aiMessages">
+                <div class="ai-message bot">
+                    <div class="message-content">
+                        Olá! Sou seu assistente virtual. Posso ajudar com informações sobre carreira em TI, salários, notas do ENEM e muito mais!
+                    </div>
+                </div>
+            </div>
+            <div class="ai-input">
+                <input type="text" id="aiUserInput" placeholder="Digite sua pergunta...">
+                <button id="aiSend"><i class="fas fa-paper-plane"></i></button>
+            </div>
+            <div class="ai-suggestions">
+                <button class="suggestion">Salários Brasil</button>
+                <button class="suggestion">Salários EUA</button>
+                <button class="suggestion">Notas ENEM</button>
+                <button class="suggestion">Formação</button>
+            </div>
+        </div>
+    </div>
+
     <header class="navbar">
         <div class="container flex-nav">
             <div class="logo">TECH<span>SYSTEM</span></div>
@@ -18,6 +49,7 @@
                     <li><a href="#sobre">A PROFISSÃO</a></li>
                     <li><a href="#salario">SALÁRIOS</a></li>
                     <li><a href="#enem">NOTAS ENEM</a></li>
+                    <li><a href="#formacao">FORMAÇÃO</a></li>
                 </ul>
             </nav>
             <!-- BARRA DE PESQUISA + WHATSAPP -->
@@ -81,7 +113,7 @@
                     <div class="card-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRElK_BFoE5iJOvD9VsZhNuNYr49WA0D5Jaog&s" alt="Junior Brasil"></div>
                     <div class="card-body">
                         <h3>NÍVEL JÚNIOR</h3>
-                        <p class="price">R$ 4.500,00</p>
+                        <p class="price">R$ 4.500/mês</p>
                         <p>Início da jornada, focado em aprendizado e execução de tarefas básicas.</p>
                     </div>
                 </div>
@@ -90,7 +122,7 @@
                     <div class="card-img"><img src="https://img.freepik.com/fotos-premium/ideias-de-brainstorming-do-codificador-pensativo-para-encontrar-o-codigo-fonte-e-desenvolver-o-script-html-na-janela-do-terminal-pensando-em-solucao-para-criar-interface-de-servidor-de-computacao-em-nuvem-programa-de-codificacao_482257-57481.jpg" alt="Pleno Brasil"></div>
                     <div class="card-body">
                         <h3>NÍVEL PLENO</h3>
-                        <p class="price">R$ 9.800,00</p>
+                        <p class="price">R$ 9.800/mês</p>
                         <p>Autonomia em projetos e resolução de problemas técnicos complexos.</p>
                     </div>
                 </div>
@@ -99,19 +131,19 @@
                     <div class="card-img"><img src="https://thumbs.dreamstime.com/b/programador-s%C3%AAnior-trabalha-com-desenvolvimento-da-programa%C3%A7%C3%A3o-de-tecnologias-e-codifica%C3%A7%C3%A3o-trabalhando-software-em-v%C3%A1rios-154840122.jpg" alt="Senior Brasil"></div>
                     <div class="card-body">
                         <h3>NÍVEL SÊNIOR</h3>
-                        <p class="price">R$ 16.500,00+</p>
+                        <p class="price">R$ 16.500/mês+</p>
                         <p>Liderança, arquitetura de sistemas e decisões estratégicas.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- NOVA SEÇÃO: SALÁRIOS EUA -->
+        <!-- SEÇÃO SALÁRIOS EUA (COM VALORES MENSAIS E CONVERSÃO) -->
         <section id="salario-eua" class="content-section">
             <div class="header-center">
                 <span class="label">MERCADO INTERNACIONAL</span>
                 <h2>PROGRESSÃO SALARIAL <span class="flag-badge"><i class="fas fa-flag-usa"></i> EUA</span></h2>
-                <p class="section-subtitle">Médias anuais em dólares (USD) para profissionais de TI nos Estados Unidos</p>
+                <p class="section-subtitle">Médias mensais em dólares (USD) para profissionais de TI nos Estados Unidos</p>
             </div>
             
             <div class="salary-grid">
@@ -119,8 +151,9 @@
                     <div class="card-img"><img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Junior EUA"></div>
                     <div class="card-body">
                         <h3>JÚNIOR</h3>
-                        <p class="price">$ 65.000</p>
-                        <p class="price-converted">≈ R$ 357.000/ano</p>
+                        <p class="price">$ 5.400/mês</p>
+                        <p class="price-converted">≈ R$ 29.700/mês</p>
+                        <p class="price-annual">($ 65.000/ano)</p>
                         <p>Entry-level software developer, foco em aprendizado.</p>
                     </div>
                 </div>
@@ -129,8 +162,9 @@
                     <div class="card-img"><img src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Pleno EUA"></div>
                     <div class="card-body">
                         <h3>PLENO</h3>
-                        <p class="price">$ 105.000</p>
-                        <p class="price-converted">≈ R$ 577.000/ano</p>
+                        <p class="price">$ 8.750/mês</p>
+                        <p class="price-converted">≈ R$ 48.125/mês</p>
+                        <p class="price-annual">($ 105.000/ano)</p>
                         <p>Mid-level developer, autonomia em projetos complexos.</p>
                     </div>
                 </div>
@@ -139,8 +173,9 @@
                     <div class="card-img"><img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Senior EUA"></div>
                     <div class="card-body">
                         <h3>SÊNIOR</h3>
-                        <p class="price">$ 150.000+</p>
-                        <p class="price-converted">≈ R$ 825.000/ano</p>
+                        <p class="price">$ 12.500/mês+</p>
+                        <p class="price-converted">≈ R$ 68.750/mês+</p>
+                        <p class="price-annual">($ 150.000+/ano)</p>
                         <p>Liderança técnica, arquitetura de sistemas.</p>
                     </div>
                 </div>
@@ -148,10 +183,81 @@
             
             <div class="salary-note">
                 <i class="fas fa-info-circle"></i>
-                <span>Valores baseados em médias do mercado americano (Silicon Valley, NY, Texas). Conversão aproximada (USD 5,50).</span>
+                <span>Valores mensais calculados com base nas médias anuais. Conversão aproximada: USD 1 = R$ 5,50.</span>
             </div>
         </section>
 
+        <!-- SEÇÃO FORMAÇÃO ACADÊMICA -->
+        <section id="formacao" class="content-section">
+            <div class="header-center">
+                <span class="label">FORMAÇÃO ACADÊMICA</span>
+                <h2>O QUE FAZER PARA CHEGAR LÁ?</h2>
+                <p class="section-subtitle">Os caminhos para se tornar um profissional de TI no Brasil e nos EUA</p>
+            </div>
+
+            <div class="formacao-grid">
+                <!-- BRASIL -->
+                <div class="formacao-card">
+                    <div class="formacao-header">
+                        <i class="fas fa-flag"></i>
+                        <h3>BRASIL</h3>
+                    </div>
+                    <div class="formacao-content">
+                        <div class="formacao-item">
+                            <h4><i class="fas fa-graduation-cap"></i> Graduação</h4>
+                            <p>Bacharelado em Ciência da Computação, Sistemas de Informação, Engenharia da Computação ou Análise e Desenvolvimento de Sistemas (tecnólogo).</p>
+                            <p class="formacao-tempo">⏱️ Duração: 2 a 5 anos</p>
+                        </div>
+                        <div class="formacao-item">
+                            <h4><i class="fas fa-certificate"></i> Certificações</h4>
+                            <p>AWS, Azure, Google Cloud, Cisco, Oracle, Scrum, entre outras.</p>
+                        </div>
+                        <div class="formacao-item">
+                            <h4><i class="fas fa-laptop-code"></i> Cursos Complementares</h4>
+                            <p>Bootcamps (Trybe, Rocketseat, Digital Innovation One), cursos online (Alura, Udemy, Coursera).</p>
+                        </div>
+                        <div class="formacao-item">
+                            <h4><i class="fas fa-briefcase"></i> Estágio</h4>
+                            <p>Geralmente a partir do 3º semestre da faculdade.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EUA -->
+                <div class="formacao-card eua-formacao">
+                    <div class="formacao-header">
+                        <i class="fas fa-flag-usa"></i>
+                        <h3>ESTADOS UNIDOS</h3>
+                    </div>
+                    <div class="formacao-content">
+                        <div class="formacao-item">
+                            <h4><i class="fas fa-graduation-cap"></i> Bachelor's Degree</h4>
+                            <p>Computer Science (CS), Information Technology (IT), Software Engineering, Computer Engineering.</p>
+                            <p class="formacao-tempo">⏱️ Duration: 4 years</p>
+                        </div>
+                        <div class="formacao-item">
+                            <h4><i class="fas fa-certificate"></i> Certifications</h4>
+                            <p>CompTIA A+, Network+, Security+, AWS Certified, Cisco CCNA, Google Professional Certificates.</p>
+                        </div>
+                        <div class="formacao-item">
+                            <h4><i class="fas fa-laptop-code"></i> Bootcamps</h4>
+                            <p>Coding bootcamps intensivos (3-6 meses): App Academy, Hack Reactor, Flatiron School, General Assembly.</p>
+                        </div>
+                        <div class="formacao-item">
+                            <h4><i class="fas fa-briefcase"></i> Internship</h4>
+                            <p>Common during junior/senior year of college. Highly competitive at top tech companies.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="formacao-note">
+                <i class="fas fa-globe-americas"></i>
+                <p>Nos EUA, o mercado é extremamente competitivo, mas os salários são os mais altos do mundo. Muitas empresas não exigem diploma se você tiver um portfólio forte e experiência prática.</p>
+            </div>
+        </section>
+
+        <!-- SEÇÃO NOTA DE CORTE ENEM (ATUALIZADA) -->
         <section id="enem" class="content-section">
             <div class="grid-layout reverse">
                 <div class="text-box">
@@ -163,6 +269,12 @@
                         <div class="table-row"><span>Sisu (Ampla)</span> <strong>780 - 820 pts</strong></div>
                         <div class="table-row"><span>Institutos Federais</span> <strong>710 - 750 pts</strong></div>
                         <div class="table-row"><span>ProUni (Bolsa 100%)</span> <strong>670 - 720 pts</strong></div>
+                        <div class="table-row"><span>FIES (Financiamento)</span> <strong>450 - 600 pts</strong></div>
+                    </div>
+
+                    <div class="enem-tip">
+                        <i class="fas fa-lightbulb"></i>
+                        <p><strong>Dica:</strong> Além do ENEM, algumas universidades como USP, UNICAMP e UNESP possuem vestibulares próprios. Fique atento aos calendários!</p>
                     </div>
                 </div>
                 <div class="img-box">
@@ -358,13 +470,13 @@
         <p>&copy; 2026 TECHSYSTEM - Todos os direitos reservados.</p>
     </footer>
 
-    <!-- Script para funcionalidade da pesquisa -->
+    <!-- Script para funcionalidades -->
     <script>
+        // Funcionalidade da pesquisa
         document.getElementById('searchForm').addEventListener('submit', function(e) {
             e.preventDefault();
             const searchTerm = this.querySelector('.search-input').value.toLowerCase();
             
-            // Mapeamento de termos para seções
             const sections = {
                 'sobre': 'sobre',
                 'profissão': 'sobre',
@@ -377,10 +489,12 @@
                 'estados unidos': 'salario-eua',
                 'enem': 'enem',
                 'nota': 'enem',
-                'corte': 'enem'
+                'corte': 'enem',
+                'formação': 'formacao',
+                'faculdade': 'formacao',
+                'curso': 'formacao'
             };
 
-            // Verifica se o termo de busca corresponde a alguma seção
             for (let [term, sectionId] of Object.entries(sections)) {
                 if (searchTerm.includes(term)) {
                     document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
@@ -388,8 +502,7 @@
                 }
             }
 
-            // Se não encontrar, mostra alerta
-            alert('Termo não encontrado. Tente: sobre, salário, eua, enem');
+            alert('Termo não encontrado. Tente: sobre, salário, eua, enem, formação');
         });
 
         // Animação do campo de busca
@@ -399,6 +512,95 @@
         });
         searchInput.addEventListener('blur', function() {
             this.parentElement.classList.remove('focused');
+        });
+
+        // ASSISTENTE IA
+        const aiAssistant = document.getElementById('aiAssistant');
+        const aiToggle = document.getElementById('aiToggle');
+        const aiChat = document.getElementById('aiChat');
+        const aiClose = document.getElementById('aiClose');
+        const aiMessages = document.getElementById('aiMessages');
+        const aiUserInput = document.getElementById('aiUserInput');
+        const aiSend = document.getElementById('aiSend');
+        const suggestions = document.querySelectorAll('.suggestion');
+
+        // Abrir chat
+        aiToggle.addEventListener('click', function() {
+            aiChat.classList.add('active');
+            aiToggle.style.display = 'none';
+        });
+
+        // Fechar chat
+        aiClose.addEventListener('click', function() {
+            aiChat.classList.remove('active');
+            aiToggle.style.display = 'flex';
+        });
+
+        // Função para adicionar mensagem
+        function addMessage(text, isUser = false) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `ai-message ${isUser ? 'user' : 'bot'}`;
+            messageDiv.innerHTML = `<div class="message-content">${text}</div>`;
+            aiMessages.appendChild(messageDiv);
+            aiMessages.scrollTop = aiMessages.scrollHeight;
+        }
+
+        // Função para respostas da IA
+        function getAIResponse(question) {
+            question = question.toLowerCase();
+            
+            if (question.includes('salário') || question.includes('salario')) {
+                if (question.includes('eua') || question.includes('usa') || question.includes('estados unidos')) {
+                    return "💰 Salários nos EUA (médios mensais):\n• Júnior: $5.400/mês\n• Pleno: $8.750/mês\n• Sênior: $12.500/mês+\n\nConversão aproximada: USD 1 = R$ 5,50";
+                } else {
+                    return "💰 Salários no Brasil (médios mensais):\n• Júnior: R$ 4.500/mês\n• Pleno: R$ 9.800/mês\n• Sênior: R$ 16.500/mês+";
+                }
+            }
+            
+            if (question.includes('enem') || question.includes('nota de corte')) {
+                return "📚 Notas de corte ENEM para TI:\n• Sisu (Ampla): 780-820 pts\n• Institutos Federais: 710-750 pts\n• ProUni (100%): 670-720 pts\n• FIES: 450-600 pts";
+            }
+            
+            if (question.includes('formaç') || question.includes('faculdade') || question.includes('curso')) {
+                return "🎓 Formação acadêmica:\n\nBRASIL:\n• Graduação (2-5 anos)\n• Certificações (AWS, Azure, Cisco)\n• Bootcamps e cursos online\n\nEUA:\n• Bachelor's Degree (4 years)\n• Professional Certifications\n• Coding Bootcamps (3-6 months)";
+            }
+            
+            if (question.includes('oi') || question.includes('olá') || question.includes('hello')) {
+                return "Olá! Como posso ajudar você hoje? Pergunte sobre salários, formação, notas do ENEM ou carreira em TI!";
+            }
+            
+            return "Desculpe, não entendi sua pergunta. Você pode perguntar sobre:\n• Salários (Brasil ou EUA)\n• Notas do ENEM\n• Formação acadêmica\n• Carreira em TI";
+        }
+
+        // Enviar mensagem
+        function sendMessage() {
+            const text = aiUserInput.value.trim();
+            if (text) {
+                addMessage(text, true);
+                aiUserInput.value = '';
+                
+                // Simular digitação
+                setTimeout(() => {
+                    const response = getAIResponse(text);
+                    addMessage(response);
+                }, 500);
+            }
+        }
+
+        aiSend.addEventListener('click', sendMessage);
+        aiUserInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+
+        // Sugestões de perguntas
+        suggestions.forEach(button => {
+            button.addEventListener('click', function() {
+                const text = this.textContent;
+                aiUserInput.value = text;
+                sendMessage();
+            });
         });
 
         // Script para o formulário de comentários
