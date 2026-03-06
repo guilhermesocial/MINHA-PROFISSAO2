@@ -4,6 +4,7 @@
     --card-bg: #161b22;
     --white: #ffffff;
     --gray: #b1b1b1;
+    --whatsapp: #25d366;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -36,9 +37,12 @@ body {
 .nav-links li a { color: white; text-decoration: none; margin-left: 30px; font-weight: 600; font-size: 0.9rem; transition: 0.3s; }
 .nav-links li a:hover { color: var(--primary); }
 
-/* BARRA DE PESQUISA - ADICIONADA */
+/* BARRA DE PESQUISA */
 .search-container {
     margin-left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
 .search-box {
@@ -94,6 +98,38 @@ body {
     font-size: 0.9rem;
 }
 
+/* WHATSAPP HEADER - ADICIONADO */
+.whatsapp-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(37, 211, 102, 0.15);
+    padding: 8px 15px;
+    border-radius: 30px;
+    text-decoration: none;
+    color: var(--white);
+    border: 1px solid rgba(37, 211, 102, 0.3);
+    transition: all 0.3s ease;
+}
+
+.whatsapp-header:hover {
+    background: rgba(37, 211, 102, 0.25);
+    border-color: var(--whatsapp);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp-header i {
+    font-size: 1.3rem;
+    color: var(--whatsapp);
+}
+
+.whatsapp-number {
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
 /* HERO */
 .hero {
     height: 70vh;
@@ -137,7 +173,7 @@ h2 { font-size: 2.5rem; margin-bottom: 20px; }
 .enem-table { margin-top: 20px; }
 .table-row { display: flex; justify-content: space-between; padding: 15px; background: rgba(255,255,255,0.03); margin-bottom: 10px; border-radius: 8px; border-left: 4px solid var(--primary); }
 
-/* SEÇÃO DE AVALIAÇÕES - ADICIONADA */
+/* SEÇÃO DE AVALIAÇÕES */
 .testimonials-section {
     padding: 80px 0;
     background: linear-gradient(180deg, transparent, rgba(0, 210, 255, 0.05));
@@ -260,10 +296,24 @@ h2 { font-size: 2.5rem; margin-bottom: 20px; }
     /* Ajustes para mobile */
     .search-container {
         margin-left: 10px;
+        gap: 10px;
     }
     
     .search-input {
         width: 120px;
+    }
+    
+    .whatsapp-number {
+        display: none;
+    }
+    
+    .whatsapp-header {
+        padding: 8px 12px;
+    }
+    
+    .whatsapp-header i {
+        font-size: 1.2rem;
+        margin: 0;
     }
     
     .testimonials-stats {
