@@ -6,6 +6,7 @@
     <title>TECHSYSTEM | Carreira & Sucesso</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
@@ -19,6 +20,15 @@
                     <li><a href="#enem">NOTAS ENEM</a></li>
                 </ul>
             </nav>
+            <!-- BARRA DE PESQUISA ADICIONADA -->
+            <div class="search-container">
+                <form class="search-box" id="searchForm">
+                    <input type="text" class="search-input" placeholder="Pesquisar...">
+                    <button type="submit" class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
         </div>
     </header>
 
@@ -111,9 +121,137 @@
 
     </main>
 
+    <!-- SEÇÃO DE AVALIAÇÕES ADICIONADA -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="header-center">
+                <span class="label">FEEDBACK</span>
+                <h2>O QUE DIZEM SOBRE NÓS</h2>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"O site me ajudou muito a entender as médias salariais e me motivou a seguir carreira na área. Conteúdo de primeira!"</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Ana Silva" class="author-img">
+                        <div>
+                            <h4>Ana Silva</h4>
+                            <p>Estudante de Ciência da Computação</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card featured">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Consegui uma vaga de estágio depois de me basear nas notas de corte do ENEM que vi aqui. Recomendo demais!"</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="João Santos" class="author-img">
+                        <div>
+                            <h4>João Santos</h4>
+                            <p>Desenvolvedor Júnior</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Informações atualizadas e muito úteis. Consegui planejar minha carreira baseado nos dados do site."</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Carla Oliveira" class="author-img">
+                        <div>
+                            <h4>Carla Oliveira</h4>
+                            <p>Analista de Sistemas Pleno</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonials-stats">
+                <div class="stat">
+                    <span class="stat-number">4.9</span>
+                    <span class="stat-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </span>
+                    <span class="stat-label">Classificação média</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">Avaliações</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">98%</span>
+                    <span class="stat-label">Recomendam</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer class="footer">
         <p>&copy; 2026 TECHSYSTEM - Todos os direitos reservados.</p>
     </footer>
 
+    <!-- Script para funcionalidade da pesquisa -->
+    <script>
+        document.getElementById('searchForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const searchTerm = this.querySelector('.search-input').value.toLowerCase();
+            
+            // Mapeamento de termos para seções
+            const sections = {
+                'sobre': 'sobre',
+                'profissão': 'sobre',
+                'ti': 'sobre',
+                'salário': 'salario',
+                'salarios': 'salario',
+                'média': 'salario',
+                'enem': 'enem',
+                'nota': 'enem',
+                'corte': 'enem'
+            };
+
+            // Verifica se o termo de busca corresponde a alguma seção
+            for (let [term, sectionId] of Object.entries(sections)) {
+                if (searchTerm.includes(term)) {
+                    document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+                    return;
+                }
+            }
+
+            // Se não encontrar, mostra alerta
+            alert('Termo não encontrado. Tente: sobre, salário, enem');
+        });
+
+        // Animação do campo de busca
+        const searchInput = document.querySelector('.search-input');
+        searchInput.addEventListener('focus', function() {
+            this.parentElement.classList.add('focused');
+        });
+        searchInput.addEventListener('blur', function() {
+            this.parentElement.classList.remove('focused');
+        });
+    </script>
 </body>
 </html>
