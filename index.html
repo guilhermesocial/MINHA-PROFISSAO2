@@ -1,23 +1,119 @@
-<section class="feedback-bar">
-        <div class="container flex-feedback">
-            <div class="user-info">
-                <img src="https://i.pravatar.cc/100?img=11" alt="Avatar do Aluno">
-                <div>
-                    <strong>Ricardo Almeida</strong>
-                    <span>Dev Fullstack & Entusiasta</span>
-                </div>
-            </div>
-            <p class="review">"A didática do TECHSYSTEM sobre o roadmap de TI e as notas do ENEM é imbatível. Recomendo para todos os meus colegas!"</p>
-            <div class="rating">
-                <span>⭐⭐⭐⭐⭐</span>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECHSYSTEM | Carreira & Sucesso</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container flex-nav">
+            <div class="logo">TECH<span>SYSTEM</span></div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#sobre">A PROFISSÃO</a></li>
+                    <li><a href="#salario">SALÁRIOS</a></li>
+                    <li><a href="#enem">NOTAS ENEM</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <span class="badge">CARREIRA TECH 2026</span>
+            <h1>DOMINE O MERCADO <br> COM <span>TECNOLOGIA</span></h1>
+            <p>Do primeiro código ao salário sênior. O guia definitivo para quem quer vencer na área de T.I.</p>
+            <div class="hero-btns">
+                <a href="#salario" class="btn-primary">Ver Salários</a>
+                <a href="#enem" class="btn-secondary">Notas de Corte</a>
             </div>
         </div>
     </section>
 
-    <a href="https://wa.me/5500000000000" class="whatsapp-float" target="_blank" title="Fale conosco no WhatsApp">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon">
-    </a>
+    <main class="container">
+        
+        <section id="sobre" class="content-section">
+            <div class="grid-layout">
+                <div class="text-box">
+                    <span class="label">O QUE É T.I.?</span>
+                    <h2>A PROFISSÃO DO FUTURO</h2>
+                    <p>Ser um profissional de T.I. vai muito além de "consertar computadores". Você será o arquiteto de soluções digitais, criando softwares, protegendo dados e desenvolvendo inteligências que movem o mundo.</p>
+                    <ul class="benefits-list">
+                        <li>✅ Trabalho Remoto (Home Office)</li>
+                        <li>✅ Salários acima da média nacional</li>
+                        <li>✅ Carreira com alcance global</li>
+                    </ul>
+                </div>
+                <div class="img-box">
+                    <img src="https://wordpress-cms-gc-prod-assets.quero.space/uploads/2020/09/Desenvolvedor-2.jpg" alt="Programador trabalhando">
+                </div>
+            </div>
+        </section>
+
+        <section id="salario" class="content-section">
+            <div class="header-center">
+                <span class="label">VALORIZAÇÃO</span>
+                <h2>PROGRESSÃO SALARIAL</h2>
+            </div>
+            
+            <div class="salary-grid">
+                <div class="card">
+                    <div class="card-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRElK_BFoE5iJOvD9VsZhNuNYr49WA0D5Jaog&s" alt="Junior"></div>
+                    <div class="card-body">
+                        <h3>NÍVEL JÚNIOR</h3>
+                        <p class="price">R$ 4.500,00</p>
+                        <p>Início da jornada, focado em aprendizado e execução de tarefas básicas.</p>
+                    </div>
+                </div>
+
+                <div class="card featured">
+                    <div class="card-img"><img src="https://img.freepik.com/fotos-premium/ideias-de-brainstorming-do-codificador-pensativo-para-encontrar-o-codigo-fonte-e-desenvolver-o-script-html-na-janela-do-terminal-pensando-em-solucao-para-criar-interface-de-servidor-de-computacao-em-nuvem-programa-de-codificacao_482257-57481.jpg" alt="Pleno"></div>
+                    <div class="card-body">
+                        <h3>NÍVEL PLENO</h3>
+                        <p class="price">R$ 9.800,00</p>
+                        <p>Autonomia em projetos e resolução de problemas técnicos complexos.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-img"><img src="https://thumbs.dreamstime.com/b/programador-s%C3%AAnior-trabalha-com-desenvolvimento-da-programa%C3%A7%C3%A3o-de-tecnologias-e-codifica%C3%A7%C3%A3o-trabalhando-software-em-v%C3%A1rios-154840122.jpg" alt="Senior"></div>
+                    <div class="card-body">
+                        <h3>NÍVEL SÊNIOR</h3>
+                        <p class="price">R$ 16.500,00+</p>
+                        <p>Liderança, arquitetura de sistemas e decisões estratégicas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="enem" class="content-section">
+            <div class="grid-layout reverse">
+                <div class="text-box">
+                    <span class="label">PORTA DE ENTRADA</span>
+                    <h2>NOTA DE CORTE ENEM</h2>
+                    <p>Para cursar Ciência da Computação ou Engenharia nas melhores universidades, prepare-se para estas médias:</p>
+                    
+                    <div class="enem-table">
+                        <div class="table-row"><span>Sisu (Ampla)</span> <strong>780 - 820 pts</strong></div>
+                        <div class="table-row"><span>Institutos Federais</span> <strong>710 - 750 pts</strong></div>
+                        <div class="table-row"><span>ProUni (Bolsa 100%)</span> <strong>670 - 720 pts</strong></div>
+                    </div>
+                </div>
+                <div class="img-box">
+                    <img src="https://imagens.ebc.com.br/DZP1VmrLS1xbZhCXX3f2NlMI1iQ=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2025/11/09/54913100355_886af15cd9_k.jpg?itok=jCgwS4dn" alt="Estudando para o ENEM">
+                </div>
+            </div>
+        </section>
+
+    </main>
 
     <footer class="footer">
         <p>&copy; 2026 TECHSYSTEM - Todos os direitos reservados.</p>
     </footer>
+
+</body>
+</html>
