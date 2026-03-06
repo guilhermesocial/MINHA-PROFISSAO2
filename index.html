@@ -214,6 +214,99 @@
         </div>
     </section>
 
+    <!-- SEÇÃO DE COMENTÁRIOS ADICIONADA -->
+    <section class="comments-section">
+        <div class="container">
+            <div class="header-center">
+                <span class="label">PARTICIPE</span>
+                <h2>DEIXE SEU <span class="highlight">COMENTÁRIO</span></h2>
+                <p class="comments-subtitle">Compartilhe sua opinião sobre o site ou tire dúvidas sobre a carreira em TI</p>
+            </div>
+
+            <div class="comments-container">
+                <!-- FORMULÁRIO DE COMENTÁRIO -->
+                <div class="comment-form-container">
+                    <form class="comment-form" id="commentForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="commentName"><i class="fas fa-user"></i></label>
+                                <input type="text" id="commentName" placeholder="Seu nome" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="commentEmail"><i class="fas fa-envelope"></i></label>
+                                <input type="email" id="commentEmail" placeholder="Seu e-mail" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="commentText"><i class="fas fa-comment"></i></label>
+                            <textarea id="commentText" rows="4" placeholder="Escreva seu comentário..." required></textarea>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn-comment-submit">
+                                <i class="fas fa-paper-plane"></i>
+                                <span>Enviar Comentário</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- LISTA DE COMENTÁRIOS -->
+                <div class="comments-list">
+                    <div class="comment-item">
+                        <div class="comment-avatar">
+                            <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Avatar">
+                        </div>
+                        <div class="comment-content">
+                            <div class="comment-header">
+                                <h4>Carlos Eduardo</h4>
+                                <span class="comment-date"><i class="far fa-clock"></i> Há 2 dias</span>
+                            </div>
+                            <p class="comment-body">Excelente site! As informações sobre as notas de corte do ENEM me ajudaram muito a escolher minha faculdade. Parabéns pelo conteúdo!</p>
+                            <div class="comment-footer">
+                                <button class="comment-like"><i class="far fa-heart"></i> 12</button>
+                                <button class="comment-reply"><i class="far fa-comment"></i> Responder</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="comment-item">
+                        <div class="comment-avatar">
+                            <img src="https://randomuser.me/api/portraits/women/28.jpg" alt="Avatar">
+                        </div>
+                        <div class="comment-content">
+                            <div class="comment-header">
+                                <h4>Mariana Costa</h4>
+                                <span class="comment-date"><i class="far fa-clock"></i> Há 5 dias</span>
+                            </div>
+                            <p class="comment-body">Muito bom o site! As médias salariais estão bem atualizadas. Já compartilhei com meus amigos que também estão pensando em seguir na área de TI.</p>
+                            <div class="comment-footer">
+                                <button class="comment-like"><i class="far fa-heart"></i> 8</button>
+                                <button class="comment-reply"><i class="far fa-comment"></i> Responder</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="comment-item">
+                        <div class="comment-avatar">
+                            <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Avatar">
+                        </div>
+                        <div class="comment-content">
+                            <div class="comment-header">
+                                <h4>Rafael Oliveira</h4>
+                                <span class="comment-date"><i class="far fa-clock"></i> Há 1 semana</span>
+                            </div>
+                            <p class="comment-body">Estou no 3º ano do ensino médio e esse site me deu uma direção do que esperar da carreira em TI. Muito obrigado pelo conteúdo gratuito e de qualidade!</p>
+                            <div class="comment-footer">
+                                <button class="comment-like"><i class="far fa-heart"></i> 15</button>
+                                <button class="comment-reply"><i class="far fa-comment"></i> Responder</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer class="footer">
         <p>&copy; 2026 TECHSYSTEM - Todos os direitos reservados.</p>
     </footer>
@@ -256,6 +349,30 @@
         });
         searchInput.addEventListener('blur', function() {
             this.parentElement.classList.remove('focused');
+        });
+
+        // Script para o formulário de comentários
+        document.getElementById('commentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('commentName').value;
+            alert(`Obrigado pelo seu comentário, ${name}! Ele será publicado após moderação.`);
+            this.reset();
+        });
+
+        // Script para os botões de like
+        document.querySelectorAll('.comment-like').forEach(button => {
+            button.addEventListener('click', function() {
+                const icon = this.querySelector('i');
+                if (icon.classList.contains('far')) {
+                    icon.classList.remove('far');
+                    icon.classList.add('fas');
+                    icon.style.color = '#ff3366';
+                } else {
+                    icon.classList.remove('fas');
+                    icon.classList.add('far');
+                    icon.style.color = '';
+                }
+            });
         });
     </script>
 </body>
