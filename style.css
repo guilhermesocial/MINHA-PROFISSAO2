@@ -325,11 +325,17 @@ body {
     letter-spacing: 0.5px;
 }
 
-/* HERO */
+/* HERO - COM NOVA IMAGEM DE FUNDO (OPÇÃO 5 - IA DIGITAL) */
 .hero {
     height: 70vh;
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1920&q=80') center/cover;
-    display: flex; align-items: center; text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)), 
+                url('https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    text-align: center;
 }
 
 .hero-content { margin: 0 auto; }
