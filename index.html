@@ -4,53 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TECHSYSTEM | Carreira & Sucesso</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- ASSISTENTE IA FLUTUANTE - VERSÃO ROBUSTA -->
+    <!-- ASSISTENTE IA ESTILO CHATGPT - INTERFACE MODERNA -->
     <div class="ai-assistant" id="aiAssistant">
         <div class="ai-button" id="aiToggle">
-            <i class="fas fa-robot"></i>
+            <i class="fas fa-comment-dots"></i>
+            <span class="notification-badge">1</span>
         </div>
         <div class="ai-chat" id="aiChat">
             <div class="ai-header">
-                <i class="fas fa-robot"></i>
-                <span>Assistente Virtual</span>
-                <button class="ai-close" id="aiClose"><i class="fas fa-times"></i></button>
+                <div class="ai-header-left">
+                    <div class="ai-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="ai-header-info">
+                        <h3>ChatGPT Assistente</h3>
+                        <p>Online • Respondo qualquer coisa</p>
+                    </div>
+                </div>
+                <div class="ai-header-right">
+                    <button class="ai-minimize" id="aiMinimize"><i class="fas fa-minus"></i></button>
+                    <button class="ai-close" id="aiClose"><i class="fas fa-times"></i></button>
+                </div>
             </div>
             <div class="ai-messages" id="aiMessages">
                 <div class="ai-message bot">
+                    <div class="ai-avatar-mini">
+                        <i class="fas fa-robot"></i>
+                    </div>
                     <div class="message-content">
-                        Olá! Sou seu assistente pessoal 🤖<br><br>
-                        Posso conversar sobre QUALQUER assunto:<br>
-                        📚 Estudos • 💼 Carreira • 🎓 ENEM<br>
-                        🍕 Comida • 🎬 Filmes • ⚽ Esportes<br>
-                        💕 Conselhos • 😂 Piadas • 🌎 Viagens<br><br>
-                        Fique à vontade para perguntar o que quiser! 😊
+                        <div class="message-name">ChatGPT</div>
+                        <div class="message-text">
+                            Olá! Sou o ChatGPT, seu assistente de IA. 🚀<br><br>
+                            Posso conversar sobre <strong>qualquer assunto</strong> que você quiser:<br><br>
+                            📚 <strong>Estudos</strong> • 💼 <strong>Carreira</strong> • 🎓 <strong>ENEM</strong><br>
+                            🍕 <strong>Comida</strong> • 🎬 <strong>Filmes</strong> • ⚽ <strong>Esportes</strong><br>
+                            💕 <strong>Conselhos</strong> • 😂 <strong>Piadas</strong> • 🌎 <strong>Viagens</strong><br>
+                            💻 <strong>Programação</strong> • 🤖 <strong>Tecnologia</strong><br><br>
+                            Como posso te ajudar hoje?
+                        </div>
+                        <div class="message-time">Agora mesmo</div>
                     </div>
                 </div>
             </div>
-            <div class="ai-input">
-                <input type="text" id="aiUserInput" placeholder="Digite sua mensagem...">
-                <button id="aiSend"><i class="fas fa-paper-plane"></i></button>
-            </div>
-            <div class="ai-suggestions">
-                <button class="suggestion">💻 Carreira TI</button>
-                <button class="suggestion">💰 Salários</button>
-                <button class="suggestion">🎓 Formação</button>
-                <button class="suggestion">🌎 Viagens</button>
-                <button class="suggestion">🍕 Comida</button>
-                <button class="suggestion">🎬 Filmes</button>
-                <button class="suggestion">⚽ Futebol</button>
-                <button class="suggestion">😂 Piada</button>
-                <button class="suggestion">💕 Conselho</button>
-            </div>
-            <div class="ai-status" id="aiStatus">
-                <i class="fas fa-circle" style="color: #4caf50; font-size: 0.6rem;"></i>
-                <span>Online</span>
+            <div class="ai-input-area">
+                <div class="ai-suggestions">
+                    <button class="suggestion">💻 O que é programação?</button>
+                    <button class="suggestion">💰 Quanto ganha um dev?</button>
+                    <button class="suggestion">🎓 Notas ENEM para TI</button>
+                    <button class="suggestion">😂 Conta uma piada</button>
+                    <button class="suggestion">💕 Conselho de amor</button>
+                    <button class="suggestion">🌎 Melhor lugar para viajar</button>
+                </div>
+                <div class="ai-input-wrapper">
+                    <textarea id="aiUserInput" placeholder="Mensagem para o ChatGPT..." rows="1"></textarea>
+                    <button id="aiSend" class="ai-send-btn">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+                <div class="ai-footer">
+                    <div class="ai-status">
+                        <i class="fas fa-circle" style="color: #10a37f; font-size: 0.6rem;"></i>
+                        <span>ChatGPT • Pronto para ajudar</span>
+                    </div>
+                    <div class="ai-powered">
+                        <i class="fas fa-bolt"></i> IA Avançada
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -66,7 +91,6 @@
                     <li><a href="#formacao">FORMAÇÃO</a></li>
                 </ul>
             </nav>
-            <!-- BARRA DE PESQUISA + WHATSAPP -->
             <div class="search-container">
                 <form class="search-box" id="searchForm">
                     <input type="text" class="search-input" placeholder="Pesquisar...">
@@ -74,7 +98,6 @@
                         <i class="fas fa-search"></i>
                     </button>
                 </form>
-                <!-- WHATSAPP ADICIONADO AO LADO -->
                 <a href="https://wa.me/5546999745788" class="whatsapp-header" target="_blank">
                     <i class="fab fa-whatsapp"></i>
                     <span class="whatsapp-number">(46) 99974-5788</span>
@@ -115,13 +138,11 @@
             </div>
         </section>
 
-        <!-- SEÇÃO SALÁRIOS BRASIL -->
         <section id="salario" class="content-section">
             <div class="header-center">
                 <span class="label">VALORIZAÇÃO</span>
                 <h2>PROGRESSÃO SALARIAL <span class="flag-badge"><i class="fas fa-flag"></i> BRASIL</span></h2>
             </div>
-            
             <div class="salary-grid">
                 <div class="card">
                     <div class="card-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRElK_BFoE5iJOvD9VsZhNuNYr49WA0D5Jaog&s" alt="Junior Brasil"></div>
@@ -131,7 +152,6 @@
                         <p>Início da jornada, focado em aprendizado e execução de tarefas básicas.</p>
                     </div>
                 </div>
-
                 <div class="card featured">
                     <div class="card-img"><img src="https://img.freepik.com/fotos-premium/ideias-de-brainstorming-do-codificador-pensativo-para-encontrar-o-codigo-fonte-e-desenvolver-o-script-html-na-janela-do-terminal-pensando-em-solucao-para-criar-interface-de-servidor-de-computacao-em-nuvem-programa-de-codificacao_482257-57481.jpg" alt="Pleno Brasil"></div>
                     <div class="card-body">
@@ -140,7 +160,6 @@
                         <p>Autonomia em projetos e resolução de problemas técnicos complexos.</p>
                     </div>
                 </div>
-
                 <div class="card">
                     <div class="card-img"><img src="https://thumbs.dreamstime.com/b/programador-s%C3%AAnior-trabalha-com-desenvolvimento-da-programa%C3%A7%C3%A3o-de-tecnologias-e-codifica%C3%A7%C3%A3o-trabalhando-software-em-v%C3%A1rios-154840122.jpg" alt="Senior Brasil"></div>
                     <div class="card-body">
@@ -152,14 +171,12 @@
             </div>
         </section>
 
-        <!-- SEÇÃO SALÁRIOS EUA -->
         <section id="salario-eua" class="content-section">
             <div class="header-center">
                 <span class="label">MERCADO INTERNACIONAL</span>
                 <h2>PROGRESSÃO SALARIAL <span class="flag-badge"><i class="fas fa-flag-usa"></i> EUA</span></h2>
                 <p class="section-subtitle">Médias mensais em dólares (USD) para profissionais de TI nos Estados Unidos</p>
             </div>
-            
             <div class="salary-grid">
                 <div class="card eua-card">
                     <div class="card-img"><img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Junior EUA"></div>
@@ -171,7 +188,6 @@
                         <p>Entry-level software developer, foco em aprendizado.</p>
                     </div>
                 </div>
-
                 <div class="card featured eua-card">
                     <div class="card-img"><img src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Pleno EUA"></div>
                     <div class="card-body">
@@ -182,7 +198,6 @@
                         <p>Mid-level developer, autonomia em projetos complexos.</p>
                     </div>
                 </div>
-
                 <div class="card eua-card">
                     <div class="card-img"><img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Senior EUA"></div>
                     <div class="card-body">
@@ -194,23 +209,19 @@
                     </div>
                 </div>
             </div>
-            
             <div class="salary-note">
                 <i class="fas fa-info-circle"></i>
                 <span>Valores mensais calculados com base nas médias anuais. Conversão aproximada: USD 1 = R$ 5,50.</span>
             </div>
         </section>
 
-        <!-- SEÇÃO FORMAÇÃO ACADÊMICA -->
         <section id="formacao" class="content-section">
             <div class="header-center">
                 <span class="label">FORMAÇÃO ACADÊMICA</span>
                 <h2>O QUE FAZER PARA CHEGAR LÁ?</h2>
                 <p class="section-subtitle">Os caminhos para se tornar um profissional de TI no Brasil e nos EUA</p>
             </div>
-
             <div class="formacao-grid">
-                <!-- BRASIL -->
                 <div class="formacao-card">
                     <div class="formacao-header">
                         <i class="fas fa-flag"></i>
@@ -236,8 +247,6 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- EUA -->
                 <div class="formacao-card eua-formacao">
                     <div class="formacao-header">
                         <i class="fas fa-flag-usa"></i>
@@ -264,28 +273,24 @@
                     </div>
                 </div>
             </div>
-
             <div class="formacao-note">
                 <i class="fas fa-globe-americas"></i>
                 <p>Nos EUA, o mercado é extremamente competitivo, mas os salários são os mais altos do mundo. Muitas empresas não exigem diploma se você tiver um portfólio forte e experiência prática.</p>
             </div>
         </section>
 
-        <!-- SEÇÃO NOTA DE CORTE ENEM -->
         <section id="enem" class="content-section">
             <div class="grid-layout reverse">
                 <div class="text-box">
                     <span class="label">PORTA DE ENTRADA</span>
                     <h2>NOTA DE CORTE ENEM</h2>
                     <p>Para cursar Ciência da Computação ou Engenharia nas melhores universidades, prepare-se para estas médias:</p>
-                    
                     <div class="enem-table">
                         <div class="table-row"><span>Sisu (Ampla)</span> <strong>780 - 820 pts</strong></div>
                         <div class="table-row"><span>Institutos Federais</span> <strong>710 - 750 pts</strong></div>
                         <div class="table-row"><span>ProUni (Bolsa 100%)</span> <strong>670 - 720 pts</strong></div>
                         <div class="table-row"><span>FIES (Financiamento)</span> <strong>450 - 600 pts</strong></div>
                     </div>
-
                     <div class="enem-tip">
                         <i class="fas fa-lightbulb"></i>
                         <p><strong>Dica:</strong> Além do ENEM, algumas universidades como USP, UNICAMP e UNESP possuem vestibulares próprios. Fique atento aos calendários!</p>
@@ -299,95 +304,52 @@
 
     </main>
 
-    <!-- SEÇÃO DE AVALIAÇÕES -->
     <section class="testimonials-section">
         <div class="container">
             <div class="header-center">
                 <span class="label">FEEDBACK</span>
                 <h2>O QUE DIZEM SOBRE NÓS</h2>
             </div>
-
             <div class="testimonials-grid">
                 <div class="testimonial-card">
                     <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
                     <p class="testimonial-text">"O site me ajudou muito a entender as médias salariais e me motivou a seguir carreira na área. Conteúdo de primeira!"</p>
                     <div class="testimonial-author">
-                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Ana Silva" class="author-img">
-                        <div>
-                            <h4>Ana Silva</h4>
-                            <p>Estudante de Ciência da Computação</p>
-                        </div>
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" class="author-img">
+                        <div><h4>Ana Silva</h4><p>Estudante de Ciência da Computação</p></div>
                     </div>
                 </div>
-
                 <div class="testimonial-card featured">
                     <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
                     <p class="testimonial-text">"Consegui uma vaga de estágio depois de me basear nas notas de corte do ENEM que vi aqui. Recomendo demais!"</p>
                     <div class="testimonial-author">
-                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="João Santos" class="author-img">
-                        <div>
-                            <h4>João Santos</h4>
-                            <p>Desenvolvedor Júnior</p>
-                        </div>
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" class="author-img">
+                        <div><h4>João Santos</h4><p>Desenvolvedor Júnior</p></div>
                     </div>
                 </div>
-
                 <div class="testimonial-card">
                     <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
                     <p class="testimonial-text">"Informações atualizadas e muito úteis. Consegui planejar minha carreira baseado nos dados do site."</p>
                     <div class="testimonial-author">
-                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Carla Oliveira" class="author-img">
-                        <div>
-                            <h4>Carla Oliveira</h4>
-                            <p>Analista de Sistemas Pleno</p>
-                        </div>
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" class="author-img">
+                        <div><h4>Carla Oliveira</h4><p>Analista de Sistemas Pleno</p></div>
                     </div>
                 </div>
             </div>
-
             <div class="testimonials-stats">
-                <div class="stat">
-                    <span class="stat-number">4.9</span>
-                    <span class="stat-stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </span>
-                    <span class="stat-label">Classificação média</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">500+</span>
-                    <span class="stat-label">Avaliações</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">98%</span>
-                    <span class="stat-label">Recomendam</span>
-                </div>
+                <div class="stat"><span class="stat-number">4.9</span><span class="stat-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span><span class="stat-label">Classificação média</span></div>
+                <div class="stat"><span class="stat-number">500+</span><span class="stat-label">Avaliações</span></div>
+                <div class="stat"><span class="stat-number">98%</span><span class="stat-label">Recomendam</span></div>
             </div>
         </div>
     </section>
 
-    <!-- SEÇÃO DE COMENTÁRIOS -->
     <section class="comments-section">
         <div class="container">
             <div class="header-center">
@@ -395,84 +357,40 @@
                 <h2>DEIXE SEU <span class="highlight">COMENTÁRIO</span></h2>
                 <p class="comments-subtitle">Compartilhe sua opinião sobre o site ou tire dúvidas sobre a carreira em TI</p>
             </div>
-
             <div class="comments-container">
-                <!-- FORMULÁRIO DE COMENTÁRIO -->
                 <div class="comment-form-container">
                     <form class="comment-form" id="commentForm">
                         <div class="form-row">
-                            <div class="form-group">
-                                <label for="commentName"><i class="fas fa-user"></i></label>
-                                <input type="text" id="commentName" placeholder="Seu nome" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="commentEmail"><i class="fas fa-envelope"></i></label>
-                                <input type="email" id="commentEmail" placeholder="Seu e-mail" required>
-                            </div>
+                            <div class="form-group"><label><i class="fas fa-user"></i></label><input type="text" id="commentName" placeholder="Seu nome" required></div>
+                            <div class="form-group"><label><i class="fas fa-envelope"></i></label><input type="email" id="commentEmail" placeholder="Seu e-mail" required></div>
                         </div>
-                        <div class="form-group">
-                            <label for="commentText"><i class="fas fa-comment"></i></label>
-                            <textarea id="commentText" rows="4" placeholder="Escreva seu comentário..." required></textarea>
-                        </div>
-                        <div class="form-actions">
-                            <button type="submit" class="btn-comment-submit">
-                                <i class="fas fa-paper-plane"></i>
-                                <span>Enviar Comentário</span>
-                            </button>
-                        </div>
+                        <div class="form-group"><label><i class="fas fa-comment"></i></label><textarea id="commentText" rows="4" placeholder="Escreva seu comentário..." required></textarea></div>
+                        <div class="form-actions"><button type="submit" class="btn-comment-submit"><i class="fas fa-paper-plane"></i><span>Enviar Comentário</span></button></div>
                     </form>
                 </div>
-
-                <!-- LISTA DE COMENTÁRIOS -->
-                <div class="comments-list">
+                <div class="comments-list" id="commentsList">
                     <div class="comment-item">
-                        <div class="comment-avatar">
-                            <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Avatar">
-                        </div>
+                        <div class="comment-avatar"><img src="https://randomuser.me/api/portraits/men/45.jpg"></div>
                         <div class="comment-content">
-                            <div class="comment-header">
-                                <h4>Carlos Eduardo</h4>
-                                <span class="comment-date"><i class="far fa-clock"></i> Há 2 dias</span>
-                            </div>
+                            <div class="comment-header"><h4>Carlos Eduardo</h4><span class="comment-date"><i class="far fa-clock"></i> Há 2 dias</span></div>
                             <p class="comment-body">Excelente site! As informações sobre as notas de corte do ENEM me ajudaram muito a escolher minha faculdade. Parabéns pelo conteúdo!</p>
-                            <div class="comment-footer">
-                                <button class="comment-like"><i class="far fa-heart"></i> <span class="like-count">12</span></button>
-                                <button class="comment-reply"><i class="far fa-comment"></i> Responder</button>
-                            </div>
+                            <div class="comment-footer"><button class="comment-like"><i class="far fa-heart"></i> <span class="like-count">12</span></button><button class="comment-reply"><i class="far fa-comment"></i> Responder</button></div>
                         </div>
                     </div>
-
                     <div class="comment-item">
-                        <div class="comment-avatar">
-                            <img src="https://randomuser.me/api/portraits/women/28.jpg" alt="Avatar">
-                        </div>
+                        <div class="comment-avatar"><img src="https://randomuser.me/api/portraits/women/28.jpg"></div>
                         <div class="comment-content">
-                            <div class="comment-header">
-                                <h4>Mariana Costa</h4>
-                                <span class="comment-date"><i class="far fa-clock"></i> Há 5 dias</span>
-                            </div>
+                            <div class="comment-header"><h4>Mariana Costa</h4><span class="comment-date"><i class="far fa-clock"></i> Há 5 dias</span></div>
                             <p class="comment-body">Muito bom o site! As médias salariais estão bem atualizadas. Já compartilhei com meus amigos que também estão pensando em seguir na área de TI.</p>
-                            <div class="comment-footer">
-                                <button class="comment-like"><i class="far fa-heart"></i> <span class="like-count">8</span></button>
-                                <button class="comment-reply"><i class="far fa-comment"></i> Responder</button>
-                            </div>
+                            <div class="comment-footer"><button class="comment-like"><i class="far fa-heart"></i> <span class="like-count">8</span></button><button class="comment-reply"><i class="far fa-comment"></i> Responder</button></div>
                         </div>
                     </div>
-
                     <div class="comment-item">
-                        <div class="comment-avatar">
-                            <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Avatar">
-                        </div>
+                        <div class="comment-avatar"><img src="https://randomuser.me/api/portraits/men/22.jpg"></div>
                         <div class="comment-content">
-                            <div class="comment-header">
-                                <h4>Rafael Oliveira</h4>
-                                <span class="comment-date"><i class="far fa-clock"></i> Há 1 semana</span>
-                            </div>
-                            <p class="comment-body">Estou no 3º ano do ensino médio e esse site me deu uma direção do que esperar da carreira em TI. Muito obrigado pelo conteúdo gratuito e de qualidade!</p>
-                            <div class="comment-footer">
-                                <button class="comment-like"><i class="far fa-heart"></i> <span class="like-count">15</span></button>
-                                <button class="comment-reply"><i class="far fa-comment"></i> Responder</button>
-                            </div>
+                            <div class="comment-header"><h4>Rafael Oliveira</h4><span class="comment-date"><i class="far fa-clock"></i> Há 1 semana</span></div>
+                            <p class="comment-body">Estou no 3º ano do ensino médio e esse site me deu uma direção do que esperar da carreira em TI. Muito obrigado!</p>
+                            <div class="comment-footer"><button class="comment-like"><i class="far fa-heart"></i> <span class="like-count">15</span></button><button class="comment-reply"><i class="far fa-comment"></i> Responder</button></div>
                         </div>
                     </div>
                 </div>
@@ -484,261 +402,305 @@
         <p>&copy; 2026 TECHSYSTEM - Todos os direitos reservados.</p>
     </footer>
 
-    <!-- Script completo com IA ROBUSTA -->
     <script>
-        // Funcionalidade da pesquisa
-        document.getElementById('searchForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const searchTerm = this.querySelector('.search-input').value.toLowerCase();
-            
-            const sections = {
-                'sobre': 'sobre',
-                'profissão': 'sobre',
-                'ti': 'sobre',
-                'salário': 'salario',
-                'salarios': 'salario',
-                'média': 'salario',
-                'eua': 'salario-eua',
-                'usa': 'salario-eua',
-                'estados unidos': 'salario-eua',
-                'enem': 'enem',
-                'nota': 'enem',
-                'corte': 'enem',
-                'formação': 'formacao',
-                'faculdade': 'formacao',
-                'curso': 'formacao'
-            };
-
-            for (let [term, sectionId] of Object.entries(sections)) {
-                if (searchTerm.includes(term)) {
-                    document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
-                    return;
-                }
-            }
-            alert('Termo não encontrado. Tente: sobre, salário, eua, enem, formação');
-        });
-
-        // Animação do campo de busca
-        const searchInput = document.querySelector('.search-input');
-        if (searchInput) {
-            searchInput.addEventListener('focus', function() {
-                this.parentElement.classList.add('focused');
-            });
-            searchInput.addEventListener('blur', function() {
-                this.parentElement.classList.remove('focused');
-            });
-        }
-
         // ============================================
-        // ASSISTENTE IA - VERSÃO ROBUSTA E CONVERSADEIRA
+        // CHATGPT ESTILO - IA INTELIGENTE
         // ============================================
         
-        const aiAssistant = document.getElementById('aiAssistant');
         const aiToggle = document.getElementById('aiToggle');
         const aiChat = document.getElementById('aiChat');
         const aiClose = document.getElementById('aiClose');
+        const aiMinimize = document.getElementById('aiMinimize');
         const aiMessages = document.getElementById('aiMessages');
         const aiUserInput = document.getElementById('aiUserInput');
         const aiSend = document.getElementById('aiSend');
         const suggestions = document.querySelectorAll('.suggestion');
-
-        let conversationHistory = [];
+        
         let userName = null;
-
+        
+        // Abrir chat
         if (aiToggle) {
-            aiToggle.addEventListener('click', function() {
+            aiToggle.addEventListener('click', () => {
                 aiChat.classList.add('active');
                 aiToggle.style.display = 'none';
             });
         }
-
+        
+        // Fechar chat
         if (aiClose) {
-            aiClose.addEventListener('click', function() {
+            aiClose.addEventListener('click', () => {
                 aiChat.classList.remove('active');
                 aiToggle.style.display = 'flex';
             });
         }
-
-        function addMessage(text, isUser = false, isTyping = false) {
+        
+        // Minimizar (opcional)
+        if (aiMinimize) {
+            aiMinimize.addEventListener('click', () => {
+                aiChat.classList.remove('active');
+                aiToggle.style.display = 'flex';
+            });
+        }
+        
+        // Auto-resize do textarea
+        if (aiUserInput) {
+            aiUserInput.addEventListener('input', function() {
+                this.style.height = 'auto';
+                this.style.height = Math.min(this.scrollHeight, 120) + 'px';
+            });
+        }
+        
+        function addMessage(text, isUser = false) {
             if (!aiMessages) return;
+            const now = new Date();
+            const timeStr = now.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
+            
             const messageDiv = document.createElement('div');
             messageDiv.className = `ai-message ${isUser ? 'user' : 'bot'}`;
-            const formattedText = text.replace(/\n/g, '<br>');
-            messageDiv.innerHTML = `<div class="message-content">${formattedText}</div>`;
+            
+            if (isUser) {
+                messageDiv.innerHTML = `
+                    <div class="message-content">
+                        <div class="message-text">${text.replace(/\n/g, '<br>')}</div>
+                        <div class="message-time">${timeStr}</div>
+                    </div>
+                    <div class="ai-avatar-mini user-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                `;
+            } else {
+                messageDiv.innerHTML = `
+                    <div class="ai-avatar-mini">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="message-content">
+                        <div class="message-name">ChatGPT</div>
+                        <div class="message-text">${text.replace(/\n/g, '<br>')}</div>
+                        <div class="message-time">${timeStr}</div>
+                    </div>
+                `;
+            }
+            
             aiMessages.appendChild(messageDiv);
             aiMessages.scrollTop = aiMessages.scrollHeight;
-            
-            if (!isTyping) {
-                conversationHistory.push({ role: isUser ? 'user' : 'assistant', content: text });
-                if (conversationHistory.length > 20) conversationHistory.shift();
-            }
         }
-
+        
         function showTyping() {
-            if (!aiMessages) return;
             const typingDiv = document.createElement('div');
-            typingDiv.className = 'ai-message bot typing-indicator';
+            typingDiv.className = 'ai-message bot typing';
             typingDiv.id = 'typingIndicator';
-            typingDiv.innerHTML = `<div class="message-content"><span class="dot">.</span><span class="dot">.</span><span class="dot">.</span> digitando</div>`;
+            typingDiv.innerHTML = `
+                <div class="ai-avatar-mini"><i class="fas fa-robot"></i></div>
+                <div class="message-content">
+                    <div class="message-name">ChatGPT</div>
+                    <div class="message-text typing-dots">
+                        <span>.</span><span>.</span><span>.</span>
+                    </div>
+                </div>
+            `;
             aiMessages.appendChild(typingDiv);
             aiMessages.scrollTop = aiMessages.scrollHeight;
         }
-
+        
         function removeTyping() {
             const typing = document.getElementById('typingIndicator');
             if (typing) typing.remove();
         }
-
-        function getIntelligentResponse(message, userName) {
-            const userMessage = message.toLowerCase().trim();
+        
+        // Função de resposta INTELIGENTE estilo ChatGPT
+        function getChatGPTResponse(message, userName) {
+            const msg = message.toLowerCase().trim();
             
-            // Saudações
-            if (userMessage.match(/^(oi|olá|ola|hello|hey|boa tarde|bom dia|boa noite|e aí|e ai|fala|salve|iae|eae|opa)/)) {
+            // Identificar nome do usuário
+            if (msg.match(/meu nome é|chamo|sou o|sou a|me chamo/)) {
+                const match = message.match(/(?:meu nome é|chamo|sou o|sou a|me chamo)\s+([A-Za-zÀ-ÖØ-öø-ÿ]+)/i);
+                if (match) {
+                    userName = match[1];
+                    return `Prazer em te conhecer, ${userName}! 👋 Meu nome é ChatGPT. Fico feliz em saber seu nome. Como posso te ajudar hoje?`;
+                }
+            }
+            
+            // Saudação
+            if (msg.match(/^(oi|olá|ola|hello|hey|boa tarde|bom dia|boa noite|e aí|fala|salve)/)) {
                 const saudacoes = [
-                    `Olá${userName ? ' ' + userName : ''}! Que bom te ver por aqui! 😊 Como posso te ajudar hoje?`,
-                    `Oi${userName ? ' ' + userName : ''}! Tudo bem? Estou aqui para conversar sobre o que você quiser! 💬`,
-                    `Salve${userName ? ' ' + userName : ''}! Fico feliz em te ver. Vamos conversar? 🚀`,
-                    `Olá${userName ? ' ' + userName : ''}! Como está sendo seu dia? Conte-me tudo! ✨`
+                    `Olá${userName ? ' ' + userName : ''}! 👋 Tudo bem? Sou o ChatGPT, seu assistente de IA. Como posso te ajudar hoje?`,
+                    `Oi${userName ? ' ' + userName : ''}! 😊 Que bom conversar com você. Pergunte o que quiser, estou aqui para ajudar!`,
+                    `Olá${userName ? ' ' + userName : ''}! ✨ Como posso ajudar você hoje?`
                 ];
                 return saudacoes[Math.floor(Math.random() * saudacoes.length)];
             }
             
-            // Nome do usuário
-            if (userMessage.includes('meu nome é') || userMessage.includes('chamo') || userMessage.includes('sou o') || userMessage.includes('sou a')) {
-                const nameMatch = message.match(/(?:meu nome é|chamo|sou o|sou a|me chamo)\s+([A-Za-zÀ-ÖØ-öø-ÿ]+)/i);
-                if (nameMatch) {
-                    userName = nameMatch[1];
-                    return `Prazer em te conhecer, ${userName}! 😊 Que nome bonito! Agora posso te chamar pelo nome. Como posso ajudar você hoje?`;
-                }
-                return "Conte-me seu nome, vou adorar saber como te chamar! 🥰";
+            // Agradecimento
+            if (msg.includes('obrigado') || msg.includes('valeu') || msg.includes('thanks')) {
+                return `Por nada${userName ? ', ' + userName : ''}! 😊 Fico feliz em poder ajudar. Se precisar de mais alguma coisa, é só chamar!`;
             }
             
-            // Como está
-            if (userMessage.includes('como você está') || userMessage.includes('tudo bem') || userMessage.includes('tudo bom')) {
-                return `Estou ótimo${userName ? ', ' + userName : ''}! Muito feliz por estar conversando com você. E aí, como andam as coisas por aí? 😊`;
+            // Tchau
+            if (msg.includes('tchau') || msg.includes('até mais') || msg.includes('bye')) {
+                return `Até mais${userName ? ', ' + userName : ''}! 👋 Foi um prazer conversar. Volte sempre que quiser!`;
             }
             
-            // Piadas
-            if (userMessage.includes('piada') || userMessage.includes('conta uma piada')) {
+            // Piada
+            if (msg.includes('piada') || msg.includes('conta uma piada')) {
                 const piadas = [
                     "🐞 Por que o programador foi preso? Porque ele cometeu um crime cibernético! 😄",
                     "☕ Qual é o café favorito do programador? Java! ☕",
                     "💕 O que o CSS disse pro HTML? 'Você me completa!' 💕",
-                    "🐛 Por que os programadores preferem o escuro? Porque a luz atrai bugs! 🐛",
-                    "🍕 Como o programador pede a pizza? Com delivery! 😅"
+                    "🐛 Por que os programadores preferem o escuro? Porque a luz atrai bugs! 🐛"
                 ];
                 return piadas[Math.floor(Math.random() * piadas.length)];
             }
             
             // Salários
-            if (userMessage.includes('salário') || userMessage.includes('quanto ganha')) {
-                if (userMessage.includes('eua') || userMessage.includes('usa')) {
-                    return `💰 Salários nos EUA:\n\n• Júnior: $5.400/mês (≈ R$ 29.700)\n• Pleno: $8.750/mês (≈ R$ 48.125)\n• Sênior: $12.500/mês+ (≈ R$ 68.750)`;
+            if (msg.includes('salário') || msg.includes('quanto ganha') || msg.includes('remuneração')) {
+                if (msg.includes('eua') || msg.includes('usa')) {
+                    return `💰 **Salários de TI nos EUA (médios):**\n\n• **Júnior:** $5.400/mês (≈ R$ 29.700)\n• **Pleno:** $8.750/mês (≈ R$ 48.125)\n• **Sênior:** $12.500/mês+ (≈ R$ 68.750)\n\n*Valores variam por região e empresa. Silicon Valley paga acima da média!*`;
                 } else {
-                    return `💰 Salários no Brasil:\n\n• Júnior: R$ 4.500/mês\n• Pleno: R$ 9.800/mês\n• Sênior: R$ 16.500/mês+`;
+                    return `💰 **Salários de TI no Brasil (médios):**\n\n• **Júnior:** R$ 4.500/mês\n• **Pleno:** R$ 9.800/mês\n• **Sênior:** R$ 16.500/mês+\n\n*Valores variam por região, empresa e stack tecnológica!*`;
                 }
             }
             
             // ENEM
-            if (userMessage.includes('enem') || userMessage.includes('nota de corte')) {
-                return `📚 Notas de corte ENEM para TI:\n\n• Sisu (Ampla): 780-820 pts\n• Institutos Federais: 710-750 pts\n• ProUni: 670-720 pts\n• FIES: 450-600 pts`;
+            if (msg.includes('enem') || msg.includes('nota de corte')) {
+                return `📚 **Notas de corte ENEM para cursos de TI:**\n\n• **Sisu (Ampla Concorrência):** 780-820 pts\n• **Institutos Federais:** 710-750 pts\n• **ProUni (Bolsa 100%):** 670-720 pts\n• **FIES:** 450-600 pts\n\n💡 *Dica: USP, UNICAMP e UNESP têm vestibulares próprios!*`;
             }
             
-            // Comida
-            if (userMessage.includes('comida') || userMessage.includes('receita')) {
-                return `🍽️ Adoro falar de comida! 🍕 Qual sua comida favorita? Me conta que posso te dar uma dica legal!`;
+            // Programação
+            if (msg.includes('programação') || msg.includes('linguagem') || msg.includes('codar')) {
+                return `💻 **Linguagens de programação mais populares:**\n\n• **JavaScript** - Web, Front-end, Back-end\n• **Python** - Dados, IA, Automação\n• **Java** - Empresas, Android\n• **TypeScript** - JavaScript com tipos\n• **C#** - Jogos, Windows, Back-end\n\nQual você tem interesse em aprender? Posso te dar dicas! 🚀`;
             }
             
-            // Filmes
-            if (userMessage.includes('filme') || userMessage.includes('série')) {
-                return `🎬 Se gosta de tecnologia, recomendo 'O Jogo da Imitação' e 'A Rede Social'!\n\nJá assistiu algum desses? 🍿`;
+            // Carreira TI
+            if (msg.includes('carreira') || msg.includes('trabalhar com ti') || msg.includes('área de ti')) {
+                return `🚀 **Áreas em alta em TI:**\n\n1️⃣ **Desenvolvimento** (Front-end, Back-end, Mobile)\n2️⃣ **Dados** (Cientista, Analista, Engenheiro)\n3️⃣ **Segurança da Informação** (Cybersecurity)\n4️⃣ **Cloud Computing** (AWS, Azure, GCP)\n5️⃣ **DevOps** (Infraestrutura como código)\n6️⃣ **Inteligência Artificial e Machine Learning**\n\nQual área mais te interessa? Posso dar dicas específicas! 💡`;
+            }
+            
+            // Formação
+            if (msg.includes('estudar') || msg.includes('aprender') || msg.includes('curso') || msg.includes('faculdade')) {
+                return `🎓 **Caminhos para entrar em TI:**\n\n• **Graduação:** 2-5 anos (Bacharelado/Tecnólogo)\n• **Cursos Online:** Alura, Udemy, Coursera, DIO\n• **Bootcamps:** Trybe, Rocketseat (3-6 meses intensivos)\n• **Certificações:** AWS, Cisco, CompTIA, Microsoft\n\n💡 *O mais importante é praticar e construir portfólio!*`;
             }
             
             // Futebol
-            if (userMessage.includes('futebol') || userMessage.includes('time')) {
-                return `⚽ Futebol é paixão nacional! Você torce para qual time? 🏆`;
+            if (msg.includes('futebol') || msg.includes('time') || msg.includes('copa')) {
+                return `⚽ Futebol é paixão nacional! Não torço para nenhum time específico, mas sei que o Brasileirão é muito disputado.\n\nQual é o seu time do coração? 🏆`;
             }
             
-            // Carreira
-            if (userMessage.includes('carreira') || userMessage.includes('trabalhar com ti')) {
-                return `🚀 Áreas em alta em TI:\n\n• Desenvolvimento (Front/Back/Mobile)\n• Dados e IA\n• Segurança da Informação\n• Cloud Computing\n\nQual área te interessa mais? 💡`;
+            // Comida
+            if (msg.includes('comida') || msg.includes('receita') || msg.includes('prato')) {
+                return `🍽️ Comida é sempre um ótimo assunto! Adoro falar sobre gastronomia.\n\nQual sua comida favorita? Me conta que posso te dar uma dica de receita! 🍕🍝🍣`;
             }
             
-            // Resposta padrão
+            // Filmes
+            if (msg.includes('filme') || msg.includes('série') || msg.includes('netflix')) {
+                return `🎬 **Recomendações de filmes/séries tech:**\n\n• **O Jogo da Imitação** - Alan Turing\n• **A Rede Social** - História do Facebook\n• **Mr. Robot** - Série sobre hacking\n• **Black Mirror** - Tecnologia e sociedade\n\nJá assistiu algum desses? 🍿`;
+            }
+            
+            // Conselho amoroso
+            if (msg.includes('amor') || msg.includes('namorar') || msg.includes('paixão')) {
+                return `💕 Amor é um assunto lindo e complexo!\n\nMe conta mais sobre o que está acontecendo. Posso tentar te dar um conselho ou apenas ouvir se preferir.\n\nO coração sabe o caminho, mas às vezes precisa de um tempinho para enxergar com clareza. 💙`;
+            }
+            
+            // Desabafo
+            if (msg.includes('triste') || msg.includes('difícil') || msg.includes('desabafar')) {
+                return `💙 Sinto muito que você esteja passando por isso.\n\nQuer conversar? Estou aqui para ouvir. Às vezes, colocar os sentimentos para fora já ajuda a aliviar.\n\nSe quiser falar mais, pode compartilhar. Estou aqui para te apoiar! 🫂`;
+            }
+            
+            // Viagens
+            if (msg.includes('viagem') || msg.includes('viajar') || msg.includes('praia')) {
+                return `✈️ Viajar é uma das melhores experiências!\n\nAlguns destinos incríveis no Brasil:\n🏖️ **Fernando de Noronha** - Praias paradisíacas\n🏔️ **Gramado** - Clima europeu\n🌊 **Rio de Janeiro** - Cristo e praias\n\nQual lugar você sonha em conhecer? 🌎`;
+            }
+            
+            // Resposta padrão inteligente
             const respostas = [
-                `Que legal${userName ? ', ' + userName : ''}! Me conta mais sobre isso, estou curioso(a) 🧐`,
-                `Interessante! Como você se sente em relação a isso? 🤔`,
-                `Adoro quando você compartilha essas coisas comigo! Conte-me mais detalhes 😊`,
-                `Entendi! E o que mais você acha sobre esse assunto? Quero saber sua opinião! 💬`
+                `Que interessante${userName ? ', ' + userName : ''}! 😊 Me conte mais sobre isso.`,
+                `Gostei do que você disse! Como você se sente em relação a isso? 🤔`,
+                `Adoro quando você compartilha suas ideias! Continue falando, estou prestando atenção 💙`,
+                `Hmm, isso me faz pensar... Qual sua opinião sobre o assunto? 🧐`,
+                `Que legal! Você tem uma visão muito interessante. Fale mais sobre isso! 🌟`
             ];
+            
             return respostas[Math.floor(Math.random() * respostas.length)];
         }
-
+        
         function sendMessage() {
             const text = aiUserInput.value.trim();
-            if (text) {
-                addMessage(text, true);
-                aiUserInput.value = '';
+            if (!text) return;
+            
+            addMessage(text, true);
+            aiUserInput.value = '';
+            aiUserInput.style.height = 'auto';
+            
+            showTyping();
+            
+            setTimeout(() => {
+                removeTyping();
+                const response = getChatGPTResponse(text, userName);
+                addMessage(response, false);
                 
-                const statusEl = document.getElementById('aiStatus');
-                if (statusEl) statusEl.innerHTML = '<i class="fas fa-circle" style="color: #ff9800; font-size: 0.6rem;"></i><span>Pensando...</span>';
-                
-                showTyping();
-                
-                setTimeout(() => {
-                    removeTyping();
-                    const response = getIntelligentResponse(text, userName);
-                    addMessage(response);
-                    if (statusEl) statusEl.innerHTML = '<i class="fas fa-circle" style="color: #4caf50; font-size: 0.6rem;"></i><span>Online</span>';
-                }, 800);
-            }
+                // Atualizar nome se detectado
+                if (response.includes('Prazer em te conhecer')) {
+                    const match = text.match(/(?:meu nome é|chamo|sou o|sou a|me chamo)\s+([A-Za-zÀ-ÖØ-öø-ÿ]+)/i);
+                    if (match) userName = match[1];
+                }
+            }, 1000 + Math.random() * 500);
         }
-
+        
         if (aiSend) {
             aiSend.addEventListener('click', sendMessage);
-            aiUserInput.addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') sendMessage();
+            aiUserInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter' && !e.shiftKey) {
+                    e.preventDefault();
+                    sendMessage();
+                }
             });
         }
-
-        suggestions.forEach(button => {
-            button.addEventListener('click', function() {
-                const text = this.textContent;
-                const cleanText = text.replace(/[💻💰🎓🌎🍕🎬⚽😂💕]/g, '').trim();
-                aiUserInput.value = cleanText;
+        
+        suggestions.forEach(btn => {
+            btn.addEventListener('click', () => {
+                aiUserInput.value = btn.textContent;
                 sendMessage();
             });
         });
-
-        // Script para comentários
-        const commentForm = document.getElementById('commentForm');
-        if (commentForm) {
-            commentForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                const name = document.getElementById('commentName').value;
-                alert(`Obrigado pelo seu comentário, ${name}! Ele será publicado após moderação.`);
-                this.reset();
-            });
-        }
-
-        // Botões de like
-        document.querySelectorAll('.comment-like').forEach(button => {
-            button.addEventListener('click', function() {
+        
+        // Pesquisa
+        document.getElementById('searchForm')?.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const term = e.target.querySelector('.search-input').value.toLowerCase();
+            const sections = {
+                'sobre': 'sobre', 'profissão': 'sobre', 'ti': 'sobre',
+                'salário': 'salario', 'salarios': 'salario',
+                'eua': 'salario-eua', 'usa': 'salario-eua',
+                'enem': 'enem', 'formação': 'formacao', 'faculdade': 'formacao'
+            };
+            for (let [key, id] of Object.entries(sections)) {
+                if (term.includes(key)) {
+                    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+                    return;
+                }
+            }
+            alert('Termo não encontrado. Tente: sobre, salário, eua, enem, formação');
+        });
+        
+        // Comentários
+        document.getElementById('commentForm')?.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert(`Obrigado pelo comentário, ${document.getElementById('commentName').value}!`);
+            e.target.reset();
+        });
+        
+        // Likes
+        document.querySelectorAll('.comment-like').forEach(btn => {
+            btn.addEventListener('click', function() {
                 const icon = this.querySelector('i');
                 const countSpan = this.querySelector('.like-count');
-                if (icon && countSpan) {
-                    let count = parseInt(countSpan.textContent);
-                    if (icon.classList.contains('far')) {
-                        icon.classList.remove('far');
-                        icon.classList.add('fas');
-                        icon.style.color = '#ff3366';
-                        countSpan.textContent = count + 1;
-                    } else {
-                        icon.classList.remove('fas');
-                        icon.classList.add('far');
-                        icon.style.color = '';
-                        countSpan.textContent = count - 1;
-                    }
+                if (icon.classList.contains('far')) {
+                    icon.classList.remove('far');
+                    icon.classList.add('fas');
+                    countSpan.textContent = parseInt(countSpan.textContent) + 1;
+                } else {
+                    icon.classList.remove('fas');
+                    icon.classList.add('far');
+                    countSpan.textContent = parseInt(countSpan.textContent) - 1;
                 }
             });
         });
